@@ -1,4 +1,4 @@
-export default function (string: string) {
+export default function stringToColor(string: string) {
   let hash = 0;
   let i;
 

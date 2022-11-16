@@ -1,5 +1,6 @@
+import { Container } from "@mui/system";
 import { FC, ReactElement } from "react";
-import Navbar from "../Navbar/Atoms/Nabvar";
+import Navbar from "../Navbar/NavbarDeskop/Molecules/Nabvar";
 
 interface IContentProps {
   children?: ReactElement;
@@ -8,9 +9,7 @@ interface IContentProps {
 const Content: FC<IContentProps> = ({ children }) => {
   return (
     <>
-      <Navbar>
-        <></>
-      </Navbar>
+      <Navbar></Navbar>
       <>{children}</>
     </>
   );
