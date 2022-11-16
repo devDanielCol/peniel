@@ -22,10 +22,10 @@ const ListServices = () => {
           return (
             <Grid key={i} item md={3}>
               <Typography
+                color="text.primary"
                 sx={{
                   fontSize: "0.8rem",
                   lineHeight: 1.1,
-                  color: "black",
                   my: 1,
                   textAlign: "center",
                   p: 0.5,
@@ -39,11 +39,11 @@ const ListServices = () => {
         })}
         <Grid item md={3}>
           <Typography
+            color="text.primary"
             sx={{
               fontSize: "0.8rem",
               lineHeight: 1.1,
               my: 1,
-              color: "white",
               backgroundColor: "#e26e5f",
               textAlign: "center",
               p: 0.5,

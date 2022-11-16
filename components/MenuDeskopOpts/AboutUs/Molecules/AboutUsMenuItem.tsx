@@ -5,7 +5,18 @@ import ListServices from "../Atoms/ListServices";
 const AboutUsMenuItem = () => {
   return (
     <>
-      <Box sx={{ width: "500px", minHeight: "400px", px: 1.5, py: 4 }}>
+      <Box
+        sx={{
+          width: "500px",
+          minHeight: "400px",
+          px: 2,
+          py: 4,
+          backgroundColor: "background.default",
+          borderRadius: 2,
+          borderBottomLeftRadius: 0,
+          borderBottomRightRadius: 0,
+        }}
+      >
         <AboutUsOpt
           title="Peniel Construcciones"
           description="Encuentra todo lo que necesitas en un solo lugar para que estes
@@ -26,7 +37,10 @@ const AboutUsMenuItem = () => {
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           height: 80,
-          borderRadius: 1.5,
+          borderRadius: 2,
+          borderTopLeftRadius: 0,
+          borderTopRightRadius: 0,
+          backgroundColor: "background.default",
         }}
       ></Box>
     </>

@@ -20,8 +20,8 @@ const ContactOpt: FC<ContactOptProps> = ({
 }) => {
   const [open, setOpen] = useState<boolean>(defaultOpen as boolean);
 
-  const defaultColor = "black";
-  const colorActive = "#5e5eff";
+  const defaultColor = "text.primary";
+  const colorActive = "#7f87ff";
 
   return (
     <>

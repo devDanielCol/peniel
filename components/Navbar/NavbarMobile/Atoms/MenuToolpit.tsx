@@ -17,9 +17,9 @@ const LightTooltip = styled(({ className, ...props }: TooltipProps) => (
   },
   [`& .${tooltipClasses.tooltip}`]: {
     backgroundColor: "transparent",
+    p: 0,
+    m: 0,
     maxWidth: "100%",
-    padding: 0,
-    margin: 0,
   },
 }));
 
@@ -36,15 +36,20 @@ const MenuToolpit: FC<IMenuToolpitProps> = ({
 }) => {
   const [open, setOpen] = useState<boolean>(defaultOpen as boolean);
 
+  const handleTooltipClose = () => {
+    setOpen(false);
+  };
+
   return (
     <LightTooltip
-      onOpen={() => {
-        setOpen(true);
+      PopperProps={{
+        disablePortal: true,
       }}
-      onClose={() => {
-        setOpen(false);
-      }}
+      onClose={handleTooltipClose}
       open={open}
+      disableFocusListener
+      disableHoverListener
+      disableTouchListener
       title={element}
     >
       <Box
@@ -52,7 +57,9 @@ const MenuToolpit: FC<IMenuToolpitProps> = ({
           display: "flex",
           ml: 2,
           alignItems: "center",
-          color: "white",
+        }}
+        onClick={() => {
+          setOpen(!open);
         }}
       >
         <Typography
@@ -63,7 +70,6 @@ const MenuToolpit: FC<IMenuToolpitProps> = ({
             opacity: open ? "70%" : "100%",
             lineHeight: 1,
             textDecoration: open ? "underline" : "none",
-            color: "white",
           }}
           component="span"
         >
@@ -75,7 +81,6 @@ const MenuToolpit: FC<IMenuToolpitProps> = ({
             opacity: open ? "100%" : "30%",
             transition: "all .2s linear",
             transform: open ? "translateY(3px)" : "translateY(0px)",
-            color: "white",
           }}
         />
       </Box>

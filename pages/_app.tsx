@@ -8,7 +8,7 @@ export default function App({ Component, pageProps }: AppProps) {
   const themes = {
     dark: darkThemeOption,
     light: lightThemeOptions,
-  }["light"];
+  }["dark"];
 
   const theme = createTheme(themes);
 

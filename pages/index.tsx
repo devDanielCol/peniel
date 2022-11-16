@@ -1,10 +1,8 @@
-import { Box } from "@mui/system";
-import Navbar from "../components/Navbar/NavbarDeskop/Molecules/Nabvar";
+import Content from "../components/Layout/Layout";
 
 export default function Home() {
   return (
-    <Box>
-      <Navbar />
+    <Content>
       <div style={{ overflow: "hidden" }}>
         <picture style={{ transform: "translateX(-75px)" }}>
           <img
@@ -20,6 +18,6 @@ export default function Home() {
           ></img>
         </picture>
       </div>
-    </Box>
+    </Content>
   );
 }

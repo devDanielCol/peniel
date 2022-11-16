@@ -8,7 +8,16 @@ import PermPhoneMsgRoundedIcon from "@mui/icons-material/PermPhoneMsgRounded";
 
 const ToolpitOpt = () => {
   return (
-    <Box sx={{ width: "300px", minHeight: "400px", px: 1.5, py: 4 }}>
+    <Box
+      sx={{
+        width: "300px",
+        minHeight: "400px",
+        px: 2,
+        py: 4,
+        backgroundColor: "background.default",
+        borderRadius: 2,
+      }}
+    >
       <ContactOpt
         icon={<FacebookRoundedIcon />}
         title="Facebook"

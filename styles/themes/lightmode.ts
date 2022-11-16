@@ -2,30 +2,39 @@ import { ThemeOptions } from "@mui/material/styles";
 
 const lightThemeOption: ThemeOptions = {
   palette: {
-    mode: "light",
+    mode: "dark",
     primary: {
-      main: "#AAC4FF",
-      light: "#00dfd8",
+      main: "#ff4d4d",
+      dark: "#ff4d4d",
+      light: "#f9cb28",
     },
     secondary: {
-      main: "#ff4d4d",
-      light: "#f9cb28",
+      main: "#7928ca",
+      dark: "#ff0080",
     },
     info: {
       main: "#B8C7FF",
+      dark: "#1E1938",
       light: "#7B78ED",
     },
     warning: {
       main: "#FEC201",
-      light: "#FF7A00",
+      dark: "#FF7A00",
     },
     success: {
       main: "#B3DCEA",
-      light: "#0FD960",
+      dark: "#0FD960",
     },
     common: {
       white: "#FFFFFF",
-      black: "#000",
+      black: "#000000",
+    },
+    text: {
+      primary: "#000",
+    },
+    background: {
+      default: "#ffffff",
+      paper: "#ffffff",
     },
   },
   typography: {
@@ -50,6 +59,17 @@ const lightThemeOption: ThemeOptions = {
       textTransform: "capitalize",
     },
     fontSize: 16,
+  },
+  components: {
+    MuiPopover: {
+      styleOverrides: {
+        paper: {
+          borderRadius: "12px",
+          backgroundColor: "#ffffff",
+          backgroundImage: "none",
+        },
+      },
+    },
   },
 };
 

@@ -11,20 +11,20 @@ const AboutUsOpt = ({ sx, title, description }: IAboutUsOptProps) => {
   return (
     <Box sx={sx}>
       <Typography
+        color="text.primary"
         sx={{
           fontSize: "1rem",
           fontWeight: 700,
           zIndex: 2,
-          color: "black",
         }}
       >
         {title}
       </Typography>
       <Typography
+        color="text.primary"
         sx={{
           fontSize: "0.8rem",
           lineHeight: 1.1,
-          color: "black",
         }}
       >
         {description}

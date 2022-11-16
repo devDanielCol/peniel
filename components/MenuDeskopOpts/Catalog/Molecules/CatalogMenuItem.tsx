@@ -4,7 +4,16 @@ import ImageSearchIcon from "@mui/icons-material/ImageSearch";
 const CatalogMenuItem = () => {
   return (
     <>
-      <Box sx={{ width: "400px", minHeight: "400px", px: 1.5, py: 4 }}>
+      <Box
+        sx={{
+          width: "400px",
+          minHeight: "300px",
+          px: 2,
+          py: 4,
+          backgroundColor: "background.default",
+          borderRadius: 2,
+        }}
+      >
         <Grid container columnSpacing={1} rowSpacing={1}>
           <Grid item md={3}>
             <Box

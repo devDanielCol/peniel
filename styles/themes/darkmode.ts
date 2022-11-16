@@ -29,9 +29,46 @@ const darkThemeOption: ThemeOptions = {
       white: "#FFFFFF",
       black: "#000000",
     },
+    text: {
+      primary: "#ffffff",
+    },
     background: {
       default: "#000",
       paper: "#111",
+    },
+  },
+  typography: {
+    fontFamily: [
+      "Alliance1",
+      "Alliance1HeaderFallback",
+      "-apple-system",
+      "BlinkMacSystemFont",
+      "-apple-system",
+      "BlinkMacSystemFont",
+      "Segoe UI",
+      "Helvetica",
+      "Roboto",
+      '"Helvetica Neue"',
+      "Arial",
+      "sans-serif",
+      "Apple Color Emoji",
+      "Segoe UI Emoji",
+      "Segoe UI Symbol",
+    ].join(","),
+    button: {
+      textTransform: "capitalize",
+    },
+    fontSize: 16,
+  },
+  components: {
+    MuiPopover: {
+      styleOverrides: {
+        paper: {
+          borderRadius: "12px",
+          backgroundColor: "#000",
+          backgroundImage: "none",
+        },
+      },
     },
   },
 };
