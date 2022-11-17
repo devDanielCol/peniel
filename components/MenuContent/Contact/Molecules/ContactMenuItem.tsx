@@ -20,7 +20,7 @@ export const socialMedia = [
   {
     name: "WhatsApp",
     icon: <WhatsAppIcon />,
-    description: "Conecta con nostros en facebook",
+    description: "Envianos un mensaje",
   },
   {
     name: "Email",
