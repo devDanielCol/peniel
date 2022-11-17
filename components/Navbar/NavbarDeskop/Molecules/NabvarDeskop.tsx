@@ -6,6 +6,7 @@ import MenuToolpit from "../Atoms/MenuToolpit/MenuToolpit";
 import CallToActionBtns from "../Atoms/CallToActionBtns/CallToActionBtns";
 import ContactItem from "../../../MenuContent/Contact/Molecules/ContactMenuItem";
 import AboutUsMenuItem from "../../../MenuContent/Solutions/Molecules/AboutUsMenuItem";
+import ThemeButton from "../../../ThemeCtrl/ThemeBtn/ThemeBtn";
 
 interface NavbarDeskopProps {
   window?: () => Window;
@@ -57,6 +58,7 @@ const NavbarDeskop = (props: NavbarDeskopProps) => {
               }}
             >
               <CallToActionBtns />
+              <ThemeButton />
             </Box>
           </Container>
         </Toolbar>

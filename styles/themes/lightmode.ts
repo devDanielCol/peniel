@@ -2,7 +2,7 @@ import { ThemeOptions } from "@mui/material/styles";
 
 const lightThemeOption: ThemeOptions = {
   palette: {
-    mode: "dark",
+    mode: "light",
     primary: {
       main: "#ff4d4d",
       dark: "#ff4d4d",
