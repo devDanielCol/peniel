@@ -1,5 +1,6 @@
 import { FC, ReactElement } from "react";
-import Navbar from "../Navbar/Atoms/Nabvar";
+import NavbarDeskop from "../Navbar/NavbarDeskop/Molecules/NabvarDeskop";
+import NavbarMobile from "../Navbar/NavbarMobile/Molecules/NavBarMobile";
 
 interface IContentProps {
   children?: ReactElement;
@@ -8,9 +9,8 @@ interface IContentProps {
 const Content: FC<IContentProps> = ({ children }) => {
   return (
     <>
-      <Navbar>
-        <></>
-      </Navbar>
+      <NavbarDeskop />
+      <NavbarMobile />
       <>{children}</>
     </>
   );
