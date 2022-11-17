@@ -1,4 +1,3 @@
-import { Box } from "@mui/material";
 import { FC, ReactElement } from "react";
 import NavbarDeskop from "../Navbar/NavbarDeskop/Molecules/NabvarDeskop";
 import NavbarMobile from "../Navbar/NavbarMobile/Molecules/NavBarMobile";
