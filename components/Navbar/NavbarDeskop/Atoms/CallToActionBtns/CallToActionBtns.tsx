@@ -1,5 +1,5 @@
 import { Box, Button } from "@mui/material";
-import CatalogMenuItem from "../../../../MenuDeskopOpts/Catalog/Molecules/CatalogMenuItem";
+import CatalogMenuItem from "../../../../MenuContent/Catalog/Molecules/CatalogMenuItem";
 import MenuToolpit from "../MenuToolpit/MenuToolpit";
 
 const CallToActionBtns = () => {

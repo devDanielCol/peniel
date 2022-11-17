@@ -4,8 +4,8 @@ import { Container } from "@mui/system";
 import MapsHomeWorkIcon from "@mui/icons-material/MapsHomeWork";
 import MenuToolpit from "../Atoms/MenuToolpit/MenuToolpit";
 import CallToActionBtns from "../Atoms/CallToActionBtns/CallToActionBtns";
-import ContactItem from "../../../MenuDeskopOpts/Contact/Molecules/ContactMenuItem";
-import AboutUsMenuItem from "../../../MenuDeskopOpts/AboutUs/Molecules/AboutUsMenuItem";
+import ContactItem from "../../../MenuContent/Contact/Molecules/ContactMenuItem";
+import AboutUsMenuItem from "../../../MenuContent/Solutions/Molecules/AboutUsMenuItem";
 
 interface NavbarDeskopProps {
   window?: () => Window;
@@ -45,7 +45,7 @@ const NavbarDeskop = (props: NavbarDeskopProps) => {
                 alignItems: "center",
               }}
             >
-              <MapsHomeWorkIcon />
+              <MapsHomeWorkIcon sx={{ color: "white" }} />
               <MenuToolpit element={<ContactItem />} name="Contacto" />
               <MenuToolpit element={<AboutUsMenuItem />} name="Soluciones" />
             </Box>

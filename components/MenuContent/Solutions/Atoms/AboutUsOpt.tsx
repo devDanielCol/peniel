@@ -29,7 +29,9 @@ const AboutUsOpt = ({ sx, title, description }: IAboutUsOptProps) => {
       >
         {description}
       </Typography>
-      <Divider sx={{ mt: 4 }} />
+      <Divider
+        sx={{ mt: 4, backgroundColor: "text.primary", opacity: "20%" }}
+      />
     </Box>
   );
 };
