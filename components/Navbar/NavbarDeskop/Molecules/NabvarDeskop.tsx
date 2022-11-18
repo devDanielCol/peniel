@@ -59,7 +59,7 @@ const NavbarDeskop = (props: NavbarDeskopProps) => {
             >
               <MenuToolpit name="Catalogo" element={<CatalogMenuItem />} />
               <CallToActionBtns />
-              <ThemeButton />
+              <ThemeButton sx={{ ml: 2 }} />
             </Box>
           </Container>
         </Toolbar>

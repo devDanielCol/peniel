@@ -6,7 +6,9 @@ interface IBodyDocumentProps {
 }
 
 const BodyDocument = ({ children }: IBodyDocumentProps) => {
-  return <Box>{children}</Box>;
+  return (
+    <Box sx={{ minHeight: "100vh", width: "100%", p: 0, m: 0 }}>{children}</Box>
+  );
 };
 
 export default BodyDocument;

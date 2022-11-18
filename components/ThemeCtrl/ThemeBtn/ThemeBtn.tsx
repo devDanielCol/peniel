@@ -1,11 +1,15 @@
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
-import { IconButton } from "@mui/material";
+import { IconButton, SxProps } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { ISelector } from "../../../types/selectors";
 import { changeTheme } from "../../../redux/reducers/theme";
 
-const ThemeButton = () => {
+interface IThemeButtonProps {
+  sx?: SxProps;
+}
+
+const ThemeButton = ({ sx }: IThemeButtonProps) => {
   const { theme: mode } = useSelector(
     ({ controllerTheme }: ISelector) => controllerTheme
   );
@@ -17,7 +21,7 @@ const ThemeButton = () => {
   };
 
   return (
-    <IconButton onClick={handleClick}>
+    <IconButton onClick={handleClick} sx={sx}>
       {mode === "dark" ? <LightModeIcon /> : <DarkModeIcon />}
     </IconButton>
   );

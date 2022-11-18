@@ -9,6 +9,7 @@ import AboutUsOpt from "../../MenuContent/Solutions/Atoms/AboutUsOpt";
 import ListServices from "../../MenuContent/Solutions/Atoms/ListServices";
 import AccordionMenuItem from "../Atoms/Accordion";
 import useTheme from "../../../util/hooks/useTheme";
+import ThemeButton from "../../ThemeCtrl/ThemeBtn/ThemeBtn";
 
 interface IMenuHmwProps {
   open: boolean;
@@ -142,9 +143,7 @@ const MenuHmw = ({ open, anchorEl, onCloseFc }: IMenuHmwProps) => {
         <Box
           sx={{
             mt: 2,
-            backgroundImage: gradients.bluePink,
             height: "fit-content",
-            backgroundColor: "black",
             borderRadius: 2.5,
             p: 0.1,
           }}
@@ -157,13 +156,7 @@ const MenuHmw = ({ open, anchorEl, onCloseFc }: IMenuHmwProps) => {
               backgroundColor: theme.palette.background.paper,
             }}
           >
-            <GradientText
-              fontSize={20}
-              gradient={gradients.bluePink}
-              animation={"none"}
-              fontWeight={500}
-              legend="Construcciones y acabados"
-            />
+            <ThemeButton />
           </Box>
         </Box>
       </Box>

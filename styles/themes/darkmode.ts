@@ -35,8 +35,8 @@ const darkThemeOption = {
       paper: "#111",
     },
     custom: {
-      navbar: "#041C32",
-      callaction: "#9EB23B",
+      navbar: "#714f447a",
+      callaction: "#fff",
     },
   },
 

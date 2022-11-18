@@ -35,8 +35,8 @@ const lightThemeOption = {
       paper: "#ffffff",
     },
     custom: {
-      navbar: "#C7F2A4",
-      callaction: "#9EB23B",
+      navbar: "#f5cbbd7a",
+      callaction: "#000",
     },
   },
   typography: {
