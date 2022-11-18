@@ -1,5 +1,5 @@
 import { Popover, Box, Grid } from "@mui/material";
-import gradients from "../../../util/colors/gradients";
+import gradients from "../../../styles/colors/gradients";
 import ImageSearchIcon from "@mui/icons-material/ImageSearch";
 import GradientText from "../../GradientText/GradientText";
 import { catalogImg } from "../../MenuContent/Catalog/Molecules/CatalogMenuItem";
@@ -8,6 +8,8 @@ import { socialMedia } from "../../MenuContent/Contact/Molecules/ContactMenuItem
 import AboutUsOpt from "../../MenuContent/Solutions/Atoms/AboutUsOpt";
 import ListServices from "../../MenuContent/Solutions/Atoms/ListServices";
 import AccordionMenuItem from "../Atoms/Accordion";
+import useTheme from "../../../util/hooks/useTheme";
+import ThemeButton from "../../ThemeCtrl/ThemeBtn/ThemeBtn";
 
 interface IMenuHmwProps {
   open: boolean;
@@ -16,6 +18,8 @@ interface IMenuHmwProps {
 }
 
 const MenuHmw = ({ open, anchorEl, onCloseFc }: IMenuHmwProps) => {
+  const theme = useTheme();
+
   return (
     <Popover
       anchorEl={anchorEl}
@@ -91,7 +95,6 @@ const MenuHmw = ({ open, anchorEl, onCloseFc }: IMenuHmwProps) => {
                   borderRadius: 2,
                   borderTopLeftRadius: 0,
                   borderTopRightRadius: 0,
-                  backgroundColor: "background.default",
                 }}
               ></Box>
             </>
@@ -140,7 +143,6 @@ const MenuHmw = ({ open, anchorEl, onCloseFc }: IMenuHmwProps) => {
         <Box
           sx={{
             mt: 2,
-            backgroundImage: gradients.bluePink,
             height: "fit-content",
             borderRadius: 2.5,
             p: 0.1,
@@ -148,19 +150,13 @@ const MenuHmw = ({ open, anchorEl, onCloseFc }: IMenuHmwProps) => {
         >
           <Box
             sx={{
-              backgroundColor: "background.default",
               borderRadius: 2.5,
               p: 2,
               textAlign: "center",
+              backgroundColor: theme.palette.background.paper,
             }}
           >
-            <GradientText
-              fontSize={20}
-              gradient={gradients.bluePink}
-              animation={"none"}
-              fontWeight={500}
-              legend="Construcciones y acabados"
-            />
+            <ThemeButton />
           </Box>
         </Box>
       </Box>

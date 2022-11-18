@@ -42,8 +42,6 @@ const ToolpitOpt = () => {
         minHeight: "400px",
         px: 2,
         py: 4,
-        backgroundColor: "background.default",
-        borderRadius: 2,
       }}
     >
       {socialMedia.map(({ name, description, icon }, i) => (

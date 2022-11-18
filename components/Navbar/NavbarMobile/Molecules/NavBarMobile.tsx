@@ -1,15 +1,10 @@
-import {
-  AppBar,
-  Button,
-  Grid,
-  Toolbar,
-  Typography,
-  useScrollTrigger,
-} from "@mui/material";
+import { AppBar, Grid, Toolbar, useScrollTrigger } from "@mui/material";
 import { FC, MouseEvent, useState } from "react";
 import MapsHomeWorkIcon from "@mui/icons-material/MapsHomeWork";
 
 import MenuHmw from "../../../Menu/Molecules/MenuHmw";
+import CallToActionBtn from "../../NavbarDeskop/Atoms/CallToActionBtns/CallToActionBtns";
+import HmwButton from "../../../Global/HmwButton/HmwButton";
 
 interface NavbarDeskopProps {
   window?: () => Window;
@@ -20,7 +15,7 @@ const NavbarMobile: FC<NavbarDeskopProps> = (props) => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
 
-  const handleClick = (event: MouseEvent<HTMLButtonElement>) => {
+  const handleClick = (event: MouseEvent<HTMLButtonElement>): void => {
     setAnchorEl(event.currentTarget);
     setMenuOpen(!menuOpen);
   };
@@ -42,7 +37,7 @@ const NavbarMobile: FC<NavbarDeskopProps> = (props) => {
         sx={{
           boxShadow: 0,
           transition: "all .2s linear",
-          backgroundColor: trigger ? "#00000080" : "transparent",
+          backgroundColor: trigger ? "custom.navbar" : "transparent",
           backdropFilter: trigger ? "blur(15px)" : "blur(0px)",
           backgroundImage: "none",
           display: {
@@ -62,22 +57,7 @@ const NavbarMobile: FC<NavbarDeskopProps> = (props) => {
                 alignItems: "center",
               }}
             >
-              <Button
-                variant="outlined"
-                sx={{
-                  px: 1,
-                  py: 0.5,
-                  ml: 2,
-                  color: "white",
-                  borderColor: "white",
-                  borderRadius: 2,
-                  "&:hover": {
-                    opacity: "70%",
-                  },
-                }}
-              >
-                Nosotros
-              </Button>
+              <CallToActionBtn />
             </Grid>
             <Grid
               item
@@ -88,7 +68,7 @@ const NavbarMobile: FC<NavbarDeskopProps> = (props) => {
                 alignItems: "center",
               }}
             >
-              <MapsHomeWorkIcon sx={{ color: "white" }} />
+              <MapsHomeWorkIcon sx={{ color: "text.primary" }} />
             </Grid>
             <Grid
               item
@@ -99,47 +79,7 @@ const NavbarMobile: FC<NavbarDeskopProps> = (props) => {
                 alignItems: "center",
               }}
             >
-              <Button
-                onClick={handleClick}
-                sx={{ display: "flex", flexDirection: "column" }}
-              >
-                <Typography
-                  component="div"
-                  sx={{
-                    width: "30px",
-                    height: "2px",
-                    backgroundColor: "white",
-                    transform: menuOpen
-                      ? "rotate(-45deg) translateX(-1px) translateY(7px)"
-                      : "",
-                    transition: "all .2s linear",
-                  }}
-                />
-                <Typography
-                  component="div"
-                  sx={{
-                    mt: 0.5,
-                    width: "30px",
-                    height: "2px",
-                    opacity: menuOpen ? "0%" : "100%",
-                    backgroundColor: "white",
-                    transition: "all .2s linear",
-                  }}
-                />
-                <Typography
-                  component="div"
-                  sx={{
-                    mt: 0.5,
-                    width: "30px",
-                    height: "2px",
-                    backgroundColor: "white",
-                    transform: menuOpen
-                      ? "rotate(45deg) translateX(-1px) translateY(-7px)"
-                      : "",
-                    transition: "all .2s linear",
-                  }}
-                />
-              </Button>
+              <HmwButton onClick={handleClick} open={menuOpen} />
             </Grid>
           </Grid>
         </Toolbar>

@@ -11,10 +11,6 @@ const AboutUsMenuItem = () => {
           minHeight: "400px",
           px: 2,
           py: 4,
-          backgroundColor: "background.default",
-          borderRadius: 2,
-          borderBottomLeftRadius: 0,
-          borderBottomRightRadius: 0,
         }}
       >
         <AboutUsOpt
@@ -36,11 +32,10 @@ const AboutUsMenuItem = () => {
           backgroundPositionY: "50%",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
-          height: 80,
+          height: 100,
           borderRadius: 2,
           borderTopLeftRadius: 0,
           borderTopRightRadius: 0,
-          backgroundColor: "background.default",
         }}
       ></Box>
     </>

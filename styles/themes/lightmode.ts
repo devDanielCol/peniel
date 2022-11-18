@@ -1,8 +1,6 @@
-import { ThemeOptions } from "@mui/material/styles";
-
-const lightThemeOption: ThemeOptions = {
+const lightThemeOption = {
   palette: {
-    mode: "dark",
+    mode: "light",
     primary: {
       main: "#ff4d4d",
       dark: "#ff4d4d",
@@ -33,8 +31,12 @@ const lightThemeOption: ThemeOptions = {
       primary: "#000",
     },
     background: {
-      default: "#ffffff",
+      default: "#F7F7F7",
       paper: "#ffffff",
+    },
+    custom: {
+      navbar: "#f5cbbd7a",
+      callaction: "#000",
     },
   },
   typography: {
@@ -67,6 +69,17 @@ const lightThemeOption: ThemeOptions = {
           borderRadius: "12px",
           backgroundColor: "#ffffff",
           backgroundImage: "none",
+        },
+      },
+    },
+    MuiTooltip: {
+      styleOverrides: {
+        tooltip: {
+          borderRadius: "12px",
+          backgroundColor: "#fbfbfb",
+          backgroundImage: "none",
+          boxShadow:
+            "rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px",
         },
       },
     },

@@ -33,8 +33,6 @@ const CatalogMenuItem = () => {
           minHeight: "300px",
           px: 2,
           py: 4,
-          backgroundColor: "background.default",
-          borderRadius: 2,
         }}
       >
         <Grid container columnSpacing={1} rowSpacing={1}>

@@ -16,7 +16,6 @@ const LightTooltip = styled(({ className, ...props }: TooltipProps) => (
     color: "transparent",
   },
   [`& .${tooltipClasses.tooltip}`]: {
-    backgroundColor: "transparent",
     maxWidth: "100%",
     padding: 0,
     margin: 0,
@@ -44,7 +43,6 @@ const MenuToolpit: FC<IMenuToolpitProps> = ({
       onClose={() => {
         setOpen(false);
       }}
-      open={open}
       title={element}
     >
       <Box
@@ -52,7 +50,7 @@ const MenuToolpit: FC<IMenuToolpitProps> = ({
           display: "flex",
           ml: 2,
           alignItems: "center",
-          color: "white",
+          color: "text.primary",
         }}
       >
         <Typography
@@ -63,7 +61,7 @@ const MenuToolpit: FC<IMenuToolpitProps> = ({
             opacity: open ? "70%" : "100%",
             lineHeight: 1,
             textDecoration: open ? "underline" : "none",
-            color: "white",
+            color: "text.primary",
           }}
           component="span"
         >
@@ -75,7 +73,7 @@ const MenuToolpit: FC<IMenuToolpitProps> = ({
             opacity: open ? "100%" : "30%",
             transition: "all .2s linear",
             transform: open ? "translateY(3px)" : "translateY(0px)",
-            color: "white",
+            color: "text.primary",
           }}
         />
       </Box>

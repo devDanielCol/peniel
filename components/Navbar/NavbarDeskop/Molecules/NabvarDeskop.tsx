@@ -6,6 +6,8 @@ import MenuToolpit from "../Atoms/MenuToolpit/MenuToolpit";
 import CallToActionBtns from "../Atoms/CallToActionBtns/CallToActionBtns";
 import ContactItem from "../../../MenuContent/Contact/Molecules/ContactMenuItem";
 import AboutUsMenuItem from "../../../MenuContent/Solutions/Molecules/AboutUsMenuItem";
+import ThemeButton from "../../../ThemeCtrl/ThemeBtn/ThemeBtn";
+import CatalogMenuItem from "../../../MenuContent/Catalog/Molecules/CatalogMenuItem";
 
 interface NavbarDeskopProps {
   window?: () => Window;
@@ -27,7 +29,7 @@ const NavbarDeskop = (props: NavbarDeskopProps) => {
           boxShadow: 0,
           transition: "all .2s linear",
           backdropFilter: trigger ? "blur(15px)" : "blur(0px)",
-          backgroundColor: trigger ? "#00000080" : "transparent",
+          backgroundColor: trigger ? "custom.navbar" : "transparent",
           backgroundImage: "none",
           display: {
             xs: "none",
@@ -41,11 +43,10 @@ const NavbarDeskop = (props: NavbarDeskopProps) => {
               sx={{
                 width: "50%",
                 display: "flex",
-                color: "white",
                 alignItems: "center",
               }}
             >
-              <MapsHomeWorkIcon sx={{ color: "white" }} />
+              <MapsHomeWorkIcon sx={{ color: "text.secondary" }} />
               <MenuToolpit element={<ContactItem />} name="Contacto" />
               <MenuToolpit element={<AboutUsMenuItem />} name="Soluciones" />
             </Box>
@@ -56,7 +57,9 @@ const NavbarDeskop = (props: NavbarDeskopProps) => {
                 justifyContent: "flex-end",
               }}
             >
+              <MenuToolpit name="Catalogo" element={<CatalogMenuItem />} />
               <CallToActionBtns />
+              <ThemeButton sx={{ ml: 2 }} />
             </Box>
           </Container>
         </Toolbar>
