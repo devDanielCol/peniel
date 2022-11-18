@@ -1,5 +1,5 @@
 import { ThemeProvider } from "@emotion/react";
-import { createTheme, CssBaseline } from "@mui/material";
+import { createTheme, CssBaseline, ThemeOptions } from "@mui/material";
 import { ReactElement, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setCurrentTheme } from "../../redux/reducers/theme";
@@ -22,12 +22,10 @@ const ThemeConfigProvider = ({ children }: IThemeProps) => {
     dispatch(setCurrentTheme());
   });
 
-  const themes = {
-    dark: darkThemeOption,
-    light: lightThemeOption,
+  const theme = {
+    dark: createTheme(darkThemeOption as ThemeOptions),
+    light: createTheme(lightThemeOption as ThemeOptions),
   }[mode];
-
-  const theme = createTheme(themes);
 
   return (
     <ThemeProvider theme={theme}>

@@ -1,6 +1,4 @@
-import { ThemeOptions } from "@mui/material/styles";
-
-const darkThemeOption: ThemeOptions = {
+const darkThemeOption = {
   palette: {
     mode: "dark",
     primary: {
@@ -36,7 +34,12 @@ const darkThemeOption: ThemeOptions = {
       default: "#000",
       paper: "#111",
     },
+    custom: {
+      navbar: "#041C32",
+      callaction: "#9EB23B",
+    },
   },
+
   typography: {
     fontFamily: [
       "Alliance1",
@@ -65,7 +68,16 @@ const darkThemeOption: ThemeOptions = {
       styleOverrides: {
         paper: {
           borderRadius: "12px",
-          backgroundColor: "#000",
+          backgroundColor: "#111",
+          backgroundImage: "none",
+        },
+      },
+    },
+    MuiTooltip: {
+      styleOverrides: {
+        tooltip: {
+          borderRadius: "12px",
+          backgroundColor: "#111",
           backgroundImage: "none",
         },
       },

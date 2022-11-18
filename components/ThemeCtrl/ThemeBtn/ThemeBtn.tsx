@@ -18,7 +18,7 @@ const ThemeButton = () => {
 
   return (
     <IconButton onClick={handleClick}>
-      {mode === "dark" ? <DarkModeIcon /> : <LightModeIcon />}
+      {mode === "dark" ? <LightModeIcon /> : <DarkModeIcon />}
     </IconButton>
   );
 };

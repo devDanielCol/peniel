@@ -1,7 +1,7 @@
 import * as React from "react";
 import { styled } from "@mui/system";
 import { FC } from "react";
-import gradients from "../../util/colors/gradients";
+import gradients from "../../styles/colors/gradients";
 import { animationOpacity } from "../../util/animation/keyframes";
 
 interface IProps {

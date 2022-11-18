@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Typography, Box, Link } from "@mui/material";
+import { Typography, Box, Link, IconButton } from "@mui/material";
 import LaunchIcon from "@mui/icons-material/Launch";
 import { useState, FC } from "react";
 
@@ -40,8 +40,10 @@ const ContactOpt: FC<ContactOptProps> = ({
             mb: 3,
           }}
         >
-          <Box sx={{ color: open ? colorActive : defaultColor }}>{icon}</Box>
-          <Box sx={{ ml: 2, backgroundColor: "background.main" }}>
+          <IconButton sx={{ color: open ? colorActive : defaultColor }}>
+            {icon}
+          </IconButton>
+          <Box sx={{ ml: 2 }}>
             <Typography
               sx={{
                 fontSize: "1rem",
@@ -72,10 +74,12 @@ const ContactOpt: FC<ContactOptProps> = ({
               zIndex: 0,
               transform: open ? "translateX(0%)" : "translateX(-100%)",
               opacity: open ? "100%" : "0%",
-              color: open ? colorActive : defaultColor,
+              // color: open ? colorActive : defaultColor,
             }}
           >
-            <LaunchIcon sx={{ width: "1rem" }} />
+            <IconButton sx={{ color: open ? colorActive : defaultColor }}>
+              <LaunchIcon sx={{ width: "1rem" }} />
+            </IconButton>
           </Box>
         </Box>
       </Link>
