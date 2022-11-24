@@ -40,7 +40,7 @@ const BannerInView = () => {
         onChange={(inView) => {
           setText1(inView);
         }}
-        threshold={1}
+        threshold={0.9}
         rootMargin={"200px 0px 0px 0px"}
         delay={100}
       >
@@ -93,7 +93,7 @@ const BannerInView = () => {
         onChange={(inView) => {
           setText2(inView);
         }}
-        threshold={1}
+        threshold={0.6}
         rootMargin={"200px 0px 0px 0px"}
         delay={100}
       >
@@ -141,7 +141,7 @@ const BannerInView = () => {
         onChange={(inView) => {
           setText3(inView);
         }}
-        threshold={1}
+        threshold={0.6}
         rootMargin={"200px 0px 0px 0px"}
         delay={100}
       >
@@ -206,7 +206,7 @@ const BannerInView = () => {
         onChange={(inView) => {
           setText4(inView);
         }}
-        threshold={1}
+        threshold={0.6}
         rootMargin={"200px 0px 0px 0px"}
         delay={100}
       >

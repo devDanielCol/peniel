@@ -38,7 +38,6 @@ const BackgroundScroll: FC<IProps> = ({ scroll, children }) => {
           width: "100%",
           height: "100%",
           backgroundImage: "url(/image/home2.jpg)",
-          backgroundPosition: `${opacity}%`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           filter: `brightness(${opacity}%)`,
