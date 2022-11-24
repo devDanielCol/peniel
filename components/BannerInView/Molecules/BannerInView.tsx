@@ -14,7 +14,7 @@ const BannerInView = () => {
   const [text4, setText4] = useState<boolean>(false);
 
   return (
-    <Box>
+    <Box sx={{ overflow: "hidden" }}>
       <Typography
         sx={{
           fontWeight: 300,
@@ -67,7 +67,10 @@ const BannerInView = () => {
               flexDirection: "column",
             }}
           >
-            <GradientText gradient={gradients.yellowPink} fontSize={"5rem"}>
+            <GradientText
+              gradient={gradients.yellowPink}
+              fontSize={{ xs: "2rem", lg: "5rem" }}
+            >
               Arquitectónico
             </GradientText>
             <Typography
@@ -77,7 +80,7 @@ const BannerInView = () => {
                 boxSizing: "border-box",
                 padding: 0,
                 lineHeight: 1,
-                fontSize: "8rem",
+                fontSize: { xs: "3rem", lg: "8rem" },
               }}
             >
               Es Fascinante
@@ -124,7 +127,8 @@ const BannerInView = () => {
                 boxSizing: "border-box",
                 padding: 0,
                 lineHeight: 1,
-                fontSize: "4rem",
+                textAlign: "center",
+                fontSize: { xs: "3rem", lg: "4rem" },
               }}
             >
               ¿ Quieres conocer más ?
@@ -172,7 +176,7 @@ const BannerInView = () => {
                 boxSizing: "border-box",
                 padding: 0,
                 lineHeight: 1,
-                fontSize: "4rem",
+                fontSize: { xs: "3rem", lg: "4rem" },
               }}
             >
               Te ofrecemos
@@ -185,8 +189,8 @@ const BannerInView = () => {
                 padding: 0,
                 lineHeight: 1,
                 mt: 2,
-                fontSize: "2rem",
-                maxWidth: "50%",
+                fontSize: { xs: "1.5rem", lg: "2rem" },
+                maxWidth: { xs: "100%", lg: "50%" },
                 textAlign: "center",
               }}
             >
@@ -237,7 +241,8 @@ const BannerInView = () => {
                 boxSizing: "border-box",
                 padding: 0,
                 lineHeight: 1,
-                fontSize: "4rem",
+                textAlign: "center",
+                fontSize: { xs: "3rem", lg: "4rem" },
               }}
             >
               Comunicate ahora mismo
@@ -250,7 +255,8 @@ const BannerInView = () => {
                 boxSizing: "border-box",
                 padding: 0,
                 lineHeight: 1,
-                fontSize: "2rem",
+                textAlign: "center",
+                fontSize: { xs: "1.5rem", lg: "2rem" },
               }}
             >
               Conoce toda la lista de servicios que tenemos disponibles para ti
@@ -262,13 +268,17 @@ const BannerInView = () => {
                   mt: 4,
                   p: 3,
                   borderRadius: "50%",
-                  fontSize: "1.3rem",
                   width: "100px",
                   height: "100px",
                   color: "white",
                 }}
               >
-                <WhatsAppIcon sx={{ width: "70px", height: "170px" }} />
+                <WhatsAppIcon
+                  sx={{
+                    width: { xs: "45px", lg: "70px" },
+                    height: { xs: "90px", lg: "170px" },
+                  }}
+                />
               </IconButton>{" "}
               <IconButton
                 color="inherit"
@@ -276,13 +286,17 @@ const BannerInView = () => {
                   mt: 4,
                   p: 3,
                   borderRadius: "50%",
-                  fontSize: "1.3rem",
                   width: "100px",
                   height: "100px",
                   color: "white",
                 }}
               >
-                <AddIcCallIcon sx={{ width: "70px", height: "170px" }} />
+                <AddIcCallIcon
+                  sx={{
+                    width: { xs: "45px", lg: "70px" },
+                    height: { xs: "90px", lg: "170px" },
+                  }}
+                />
               </IconButton>{" "}
               <IconButton
                 color="inherit"
@@ -290,13 +304,17 @@ const BannerInView = () => {
                   mt: 4,
                   p: 3,
                   borderRadius: "50%",
-                  fontSize: "1.3rem",
                   width: "100px",
                   height: "100px",
                   color: "white",
                 }}
               >
-                <AlternateEmailIcon sx={{ width: "70px", height: "170px" }} />
+                <AlternateEmailIcon
+                  sx={{
+                    width: { xs: "45px", lg: "70px" },
+                    height: { xs: "90px", lg: "170px" },
+                  }}
+                />
               </IconButton>
             </Box>
           </Box>

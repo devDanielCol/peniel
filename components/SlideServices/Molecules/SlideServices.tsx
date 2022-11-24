@@ -43,23 +43,45 @@ const SlideServices = () => {
 
   return (
     <>
-      <Swiper
-        slidesPerView={4}
-        centeredSlides={true}
-        spaceBetween={10}
-        navigation={true}
-        modules={[Pagination, Navigation]}
-      >
-        <SwiperSlide>{slide}</SwiperSlide>
-        <SwiperSlide>{slide}</SwiperSlide>
-        <SwiperSlide>{slide}</SwiperSlide>
-        <SwiperSlide>{slide}</SwiperSlide>
-        <SwiperSlide>{slide}</SwiperSlide>
-        <SwiperSlide>{slide}</SwiperSlide>
-        <SwiperSlide>{slide}</SwiperSlide>
-        <SwiperSlide>{slide}</SwiperSlide>
-        <SwiperSlide>{slide}</SwiperSlide>
-      </Swiper>
+      <Box sx={{ display: { xs: "none", md: "block" } }}>
+        <Swiper
+          slidesPerView={4}
+          centeredSlides={true}
+          spaceBetween={10}
+          navigation={true}
+          modules={[Pagination, Navigation]}
+        >
+          <SwiperSlide>{slide}</SwiperSlide>
+          <SwiperSlide>{slide}</SwiperSlide>
+          <SwiperSlide>{slide}</SwiperSlide>
+          <SwiperSlide>{slide}</SwiperSlide>
+          <SwiperSlide>{slide}</SwiperSlide>
+          <SwiperSlide>{slide}</SwiperSlide>
+          <SwiperSlide>{slide}</SwiperSlide>
+          <SwiperSlide>{slide}</SwiperSlide>
+          <SwiperSlide>{slide}</SwiperSlide>
+        </Swiper>
+      </Box>
+
+      <Box sx={{ display: { xs: "block", md: "none" } }}>
+        <Swiper
+          slidesPerView={1}
+          centeredSlides={true}
+          spaceBetween={10}
+          navigation={true}
+          modules={[Pagination, Navigation]}
+        >
+          <SwiperSlide>{slide}</SwiperSlide>
+          <SwiperSlide>{slide}</SwiperSlide>
+          <SwiperSlide>{slide}</SwiperSlide>
+          <SwiperSlide>{slide}</SwiperSlide>
+          <SwiperSlide>{slide}</SwiperSlide>
+          <SwiperSlide>{slide}</SwiperSlide>
+          <SwiperSlide>{slide}</SwiperSlide>
+          <SwiperSlide>{slide}</SwiperSlide>
+          <SwiperSlide>{slide}</SwiperSlide>
+        </Swiper>
+      </Box>
     </>
   );
 };
