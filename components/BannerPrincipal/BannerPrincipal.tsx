@@ -7,11 +7,19 @@ const BannerPrincipal: FC = () => {
   const [gradient, setGradient] = useState<number>(0);
 
   return (
-    <Container sx={{ width: "100vw", height: "100vh" }}>
+    <Container>
       <MouseMoveContent
-        onMove={({ centerX, pageX, width }) => {
+        onMove={({ centerX, pageX, pageY, width, height, centerY }) => {
           const dX = pageX - centerX;
-          setGradient((dX / width) * 100);
+          const dY = pageY - centerY;
+          setGradient((dX / width) * 100 + (dY / height) * 100);
+        }}
+        sx={{
+          width: "100%",
+          height: "100vh",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
         }}
       >
         <GradientText
@@ -21,9 +29,9 @@ const BannerPrincipal: FC = () => {
             md: "120px",
             lg: "120px",
           }}
-          textAlign={{ xs: "center", md: "left" }}
+          textAlign={{ xs: "center", md: "center" }}
           letterSpacing={{ xs: "-2px", sm: "-3px" }}
-          gradient={`linear-gradient(to right, #5d309e , #995bff ${gradient}% )`}
+          gradient={`radial-gradient( circle at ${gradient}%,#5d309e,#995bff)`}
           sx={{ ml: 1 }}
         >
           Peniel Constucciones

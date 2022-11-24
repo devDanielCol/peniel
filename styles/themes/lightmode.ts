@@ -37,6 +37,8 @@ const lightThemeOption = {
     custom: {
       navbar: "#ffffff90",
       callaction: "#000",
+      section1: "#c294ff",
+      footer: "#f5f5f7",
     },
   },
   typography: {

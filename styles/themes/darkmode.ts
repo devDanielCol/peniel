@@ -31,12 +31,13 @@ const darkThemeOption = {
       primary: "#ffffff",
     },
     background: {
-      default: "#170b29",
-      paper: "#332051",
+      default: "#000",
+      paper: "#111",
     },
     custom: {
-      navbar: "#251247a3",
+      navbar: "#000000cc",
       callaction: "#fff",
+      section1: "#0b0513",
     },
   },
 
@@ -68,7 +69,7 @@ const darkThemeOption = {
       styleOverrides: {
         paper: {
           borderRadius: "12px",
-          backgroundColor: "#332051",
+          backgroundColor: "#111",
           backgroundImage: "none",
         },
       },
@@ -77,7 +78,7 @@ const darkThemeOption = {
       styleOverrides: {
         tooltip: {
           borderRadius: "12px",
-          backgroundColor: "#332051",
+          backgroundColor: "#111",
           backgroundImage: "none",
         },
       },

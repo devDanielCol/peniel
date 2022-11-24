@@ -1,35 +1,19 @@
-import { ThemeOptions } from "@mui/material/styles";
-
-const besorThemeOptions: ThemeOptions = {
-  typography: {
-    fontFamily: ["Causten"].join(","),
-  },
-  components: {
-    MuiCssBaseline: {
-      styleOverrides: `
-        @font-face {
-          font-family: 'Causten';
-          font-style: normal;
-          font-display: swap;
-          font-weight: 100;
-        }
-      `,
-    },
-  },
+const darkThemeOption = {
   palette: {
-    mode: "light",
+    mode: "dark",
     primary: {
-      main: "#653F90",
-      dark: "#271938",
-      light: "#C8B0E3",
+      main: "#4e317e",
+      dark: "#ff4d4d",
+      light: "#f9cb28",
     },
     secondary: {
-      main: "#75ACFF",
-      light: "#A47CD0",
+      main: "#7928ca",
+      dark: "#ff0080",
     },
     info: {
       main: "#B8C7FF",
-      dark: "#7B78ED",
+      dark: "#1E1938",
+      light: "#7B78ED",
     },
     warning: {
       main: "#FEC201",
@@ -43,7 +27,63 @@ const besorThemeOptions: ThemeOptions = {
       white: "#FFFFFF",
       black: "#000000",
     },
+    text: {
+      primary: "#ffffff",
+    },
+    background: {
+      default: "#170b29",
+      paper: "#332051",
+    },
+    custom: {
+      navbar: "#251247a3",
+      callaction: "#fff",
+      section1: "#0b0513",
+    },
+  },
+
+  typography: {
+    fontFamily: [
+      "Alliance1",
+      "Alliance1HeaderFallback",
+      "-apple-system",
+      "BlinkMacSystemFont",
+      "-apple-system",
+      "BlinkMacSystemFont",
+      "Segoe UI",
+      "Helvetica",
+      "Roboto",
+      '"Helvetica Neue"',
+      "Arial",
+      "sans-serif",
+      "Apple Color Emoji",
+      "Segoe UI Emoji",
+      "Segoe UI Symbol",
+    ].join(","),
+    button: {
+      textTransform: "capitalize",
+    },
+    fontSize: 16,
+  },
+  components: {
+    MuiPopover: {
+      styleOverrides: {
+        paper: {
+          borderRadius: "12px",
+          backgroundColor: "#332051",
+          backgroundImage: "none",
+        },
+      },
+    },
+    MuiTooltip: {
+      styleOverrides: {
+        tooltip: {
+          borderRadius: "12px",
+          backgroundColor: "#332051",
+          backgroundImage: "none",
+        },
+      },
+    },
   },
 };
 
-export default besorThemeOptions;
+export default darkThemeOption;

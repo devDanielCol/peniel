@@ -41,7 +41,7 @@ const MouseMoveContent: FC<IMouseMoveContentProps> = ({
     const dY = pageY - centerY;
 
     const porcentX = (dX / 360) * 2;
-    const porcentY = (dY / 360) * 25;
+    const porcentY = (dY / 360) * 15;
 
     setRotateX(-porcentX);
     setRotateY(-porcentY);
@@ -55,26 +55,12 @@ const MouseMoveContent: FC<IMouseMoveContentProps> = ({
   };
 
   return (
-    <Box
-      ref={ref}
-      onMouseMove={handleMouseMove}
-      onMouseOut={handleMouseOut}
-      sx={{
-        width: "100%",
-        height: "100%",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        ...sx,
-      }}
-    >
+    <Box ref={ref} onMouseMove={handleMouseMove} onMouseOut={handleMouseOut}>
       <Box
         sx={{
+          ...sx,
           transition: "all 0.2s linear",
           zIndex: 10,
-          display: "flex",
-          flexDirection: "column",
-          perspectiveOrigin: "center",
           transform: `perspective(900px) rotateY(${rotateX}deg) rotateX(${rotateY}deg)`,
         }}
       >

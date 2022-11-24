@@ -32,9 +32,9 @@ const OpacityScroll: FC<IProps> = ({ scroll, children }) => {
       let proximity = 0;
 
       if (proximity >= 0) {
-        proximity = proximity + (b - 100);
+        proximity = proximity + (b - document.documentElement.clientHeight / 2);
       }
-      const proximityPercentage = proximity / (h / 1.5);
+      const proximityPercentage = proximity / (h / 2);
       if (proximityPercentage >= 0) {
         setOpacity(proximityPercentage);
       }
