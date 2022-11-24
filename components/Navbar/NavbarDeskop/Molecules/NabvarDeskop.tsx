@@ -35,6 +35,8 @@ const NavbarDeskop = (props: NavbarDeskopProps) => {
             xs: "none",
             lg: "block",
           },
+          borderBottom: "solid 1px",
+          borderBottomColor: trigger ? "#4e317e50" : "transparent",
         }}
       >
         <Toolbar>

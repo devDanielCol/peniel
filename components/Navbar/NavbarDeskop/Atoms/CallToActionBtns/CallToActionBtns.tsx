@@ -4,6 +4,8 @@ const CallToActionBtn = () => {
   return (
     <Button
       variant="outlined"
+      component="a"
+      href="#services"
       sx={{
         px: 1,
         py: 0.5,
@@ -18,7 +20,7 @@ const CallToActionBtn = () => {
         },
       }}
     >
-      Nosotros
+      Servicios
     </Button>
   );
 };
