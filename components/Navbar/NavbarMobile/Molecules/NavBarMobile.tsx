@@ -44,6 +44,8 @@ const NavbarMobile: FC<NavbarDeskopProps> = (props) => {
             xs: "block",
             lg: "none",
           },
+          borderBottom: "solid 0.5px",
+          borderBottomColor: trigger ? "#4e317e50" : "transparent",
         }}
       >
         <Toolbar>

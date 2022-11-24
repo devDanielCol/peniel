@@ -12,6 +12,7 @@ const gradients = {
   pinkRedPink: "linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%)",
   yellowPink: "linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%)",
   orangeLightOrange: "linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%)",
+  darkPurple: "linear-gradient(to right, #5d309e, #995bff)",
 };
 
 export default gradients;

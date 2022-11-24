@@ -31,11 +31,11 @@ const lightThemeOption = {
       primary: "#000",
     },
     background: {
-      default: "#F7F7F7",
+      default: "#f4f6f9",
       paper: "#ffffff",
     },
     custom: {
-      navbar: "#f5cbbd7a",
+      navbar: "#ffffff90",
       callaction: "#000",
     },
   },
@@ -67,7 +67,7 @@ const lightThemeOption = {
       styleOverrides: {
         paper: {
           borderRadius: "12px",
-          backgroundColor: "#ffffff",
+          backgroundColor: "#fff",
           backgroundImage: "none",
         },
       },
@@ -76,7 +76,7 @@ const lightThemeOption = {
       styleOverrides: {
         tooltip: {
           borderRadius: "12px",
-          backgroundColor: "#fbfbfb",
+          backgroundColor: "#fff",
           backgroundImage: "none",
           boxShadow:
             "rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px",

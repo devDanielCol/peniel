@@ -2,7 +2,7 @@ const darkThemeOption = {
   palette: {
     mode: "dark",
     primary: {
-      main: "#ff4d4d",
+      main: "#4e317e",
       dark: "#ff4d4d",
       light: "#f9cb28",
     },
@@ -31,11 +31,11 @@ const darkThemeOption = {
       primary: "#ffffff",
     },
     background: {
-      default: "#000",
-      paper: "#111",
+      default: "#170b29",
+      paper: "#332051",
     },
     custom: {
-      navbar: "#714f447a",
+      navbar: "#251247a3",
       callaction: "#fff",
     },
   },
@@ -68,7 +68,7 @@ const darkThemeOption = {
       styleOverrides: {
         paper: {
           borderRadius: "12px",
-          backgroundColor: "#111",
+          backgroundColor: "#332051",
           backgroundImage: "none",
         },
       },
@@ -77,7 +77,7 @@ const darkThemeOption = {
       styleOverrides: {
         tooltip: {
           borderRadius: "12px",
-          backgroundColor: "#111",
+          backgroundColor: "#332051",
           backgroundImage: "none",
         },
       },
