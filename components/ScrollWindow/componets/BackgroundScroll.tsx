@@ -36,7 +36,8 @@ const BackgroundScroll: FC<IProps> = ({ scroll, children }) => {
         ref={ref}
         sx={{
           width: "100%",
-          height: "100%",
+          height: "70%",
+          backgroundPosition: "center",
           backgroundImage: "url(/image/home2.jpg)",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
