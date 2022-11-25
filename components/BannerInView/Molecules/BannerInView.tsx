@@ -1,8 +1,6 @@
 import { Box, IconButton, Typography } from "@mui/material";
 import { useState } from "react";
 import { InView } from "react-intersection-observer";
-import gradients from "../../../styles/colors/gradients";
-import GradientText from "../../GradientText/GradientText";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import AddIcCallIcon from "@mui/icons-material/AddIcCall";
 import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
@@ -14,8 +12,8 @@ const BannerInView = () => {
   const [text4, setText4] = useState<boolean>(false);
 
   return (
-    <Box sx={{ overflow: "hidden" }}>
-      <Typography
+    <Box>
+      {/* <Typography
         sx={{
           fontWeight: 300,
           zIndex: 1,
@@ -35,12 +33,12 @@ const BannerInView = () => {
         }}
       >
         ¿Te gusta lo que ves?
-      </Typography>
+      </Typography> */}
       <InView
         onChange={(inView) => {
           setText1(inView);
         }}
-        threshold={0.9}
+        threshold={0.8}
         rootMargin={"200px 0px 0px 0px"}
         delay={100}
       >
@@ -48,31 +46,30 @@ const BannerInView = () => {
           sx={{
             width: "100%",
             height: "90vh",
-            pt: 8,
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
             flexDirection: "column",
-            // backgroundImage: "linear-gradient(0deg, #5598def5, #2ca2b4)",
+            backgroundColor: "#FBDA61",
           }}
         >
           <Box
             sx={{
               transform: text1 ? "translateY(0%)" : "translateY(100%)",
               opacity: text1 ? "100%" : "0%",
-              transition: "all .5s linear",
+              transition: "all .3s linear",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
               flexDirection: "column",
             }}
           >
-            <GradientText
+            {/* <GradientText
               gradient={gradients.yellowPink}
               fontSize={{ xs: "2rem", lg: "5rem" }}
             >
               Arquitectónico
-            </GradientText>
+            </GradientText> */}
             <Typography
               sx={{
                 fontWeight: 500,
@@ -89,31 +86,33 @@ const BannerInView = () => {
         </Box>
       </InView>
 
-      <InView
-        onChange={(inView) => {
-          setText2(inView);
+      <Box
+        sx={{
+          width: "100%",
+          height: "50vh",
+          pt: 8,
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection: "column",
+          backgroundColor: "#FBDA61",
+          // backgroundImage: "linear-gradient(0deg, #7f87ff, #5598def5)",
         }}
-        threshold={0.6}
-        rootMargin={"200px 0px 0px 0px"}
-        delay={100}
       >
-        <Box
-          sx={{
-            width: "100%",
-            height: "50vh",
-            pt: 8,
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            flexDirection: "column",
-            // backgroundImage: "linear-gradient(0deg, #7f87ff, #5598def5)",
+        <InView
+          onChange={(inView) => {
+            setText2(inView);
           }}
+          threshold={0.6}
+          rootMargin={"200px 0px 0px 0px"}
+          delay={100}
         >
+          {" "}
           <Box
             sx={{
               transform: text2 ? "translateY(0%)" : "translateY(100%)",
               opacity: text2 ? "100%" : "0%",
-              transition: "all .5s linear",
+              transition: "all .2s linear",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
@@ -134,8 +133,8 @@ const BannerInView = () => {
               ¿ Quieres conocer más ?
             </Typography>
           </Box>
-        </Box>
-      </InView>
+        </InView>
+      </Box>
 
       <InView
         onChange={(inView) => {
@@ -202,27 +201,28 @@ const BannerInView = () => {
         </Box>
       </InView>
 
-      <InView
-        onChange={(inView) => {
-          setText4(inView);
+      <Box
+        sx={{
+          width: "100%",
+          height: "100vh",
+          pt: 8,
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection: "column",
+          backgroundImage: "linear-gradient(0deg, #ec3d43, #FF5ACD)",
+          color: "white",
         }}
-        threshold={0.6}
-        rootMargin={"200px 0px 0px 0px"}
-        delay={100}
       >
-        <Box
-          sx={{
-            width: "100%",
-            height: "100vh",
-            pt: 8,
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            flexDirection: "column",
-            backgroundImage: "linear-gradient(0deg, #ec3d43, #FF5ACD)",
-            color: "white",
+        <InView
+          onChange={(inView) => {
+            setText4(inView);
           }}
+          threshold={1}
+          rootMargin={"200px 0px 0px 0px"}
+          delay={100}
         >
+          {" "}
           <Box
             sx={{
               transform: text4 ? "translateY(0%)" : "translateY(100%)",
@@ -318,8 +318,21 @@ const BannerInView = () => {
               </IconButton>
             </Box>
           </Box>
-        </Box>
-      </InView>
+        </InView>
+      </Box>
+      <Box
+        sx={{
+          width: "100%",
+          height: "100vh",
+          pt: 8,
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection: "column",
+          backgroundColor: "#ec3d43",
+          color: "white",
+        }}
+      ></Box>
     </Box>
   );
 };
