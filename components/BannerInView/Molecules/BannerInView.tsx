@@ -4,72 +4,38 @@ import { InView } from "react-intersection-observer";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import AddIcCallIcon from "@mui/icons-material/AddIcCall";
 import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
+import TranslateScroll from "../../ScrollWindow/componets/TranslateScroll";
 
-const BannerInView = () => {
-  const [text1, setText1] = useState<boolean>(false);
+const BannerInView = ({ scroll }: { scroll: number }) => {
   const [text2, setText2] = useState<boolean>(false);
   const [text3, setText3] = useState<boolean>(false);
   const [text4, setText4] = useState<boolean>(false);
 
   return (
-    <Box>
-      {/* <Typography
+    <>
+      <Box
         sx={{
-          fontWeight: 300,
-          zIndex: 1,
-          boxSizing: "border-box",
-          padding: 0,
-          m: 0,
-          lineHeight: 1,
-          fontSize: "1rem",
-          position: "sticky",
-          top: "100px",
-          width: "200px",
-          px: 2,
-          py: 1,
-          borderBottomRightRadius: "16px",
-          color: "white",
-          backgroundImage: "linear-gradient(to right, #d84242, #ff0068)",
+          width: "100%",
+          height: "100vh",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection: "column",
+          backgroundColor: "#FBDA61",
+          scrollSnapAlign: "center",
         }}
       >
-        ¿Te gusta lo que ves?
-      </Typography> */}
-      <InView
-        onChange={(inView) => {
-          setText1(inView);
-        }}
-        threshold={0.8}
-        rootMargin={"200px 0px 0px 0px"}
-        delay={100}
-      >
-        <Box
-          sx={{
-            width: "100%",
-            height: "90vh",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            flexDirection: "column",
-            backgroundColor: "#FBDA61",
-          }}
-        >
+        <TranslateScroll scroll={scroll}>
           <Box
             sx={{
-              transform: text1 ? "translateY(0%)" : "translateY(100%)",
-              opacity: text1 ? "100%" : "0%",
-              transition: "all .3s linear",
+              width: "100%",
+              height: "100vh",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
               flexDirection: "column",
             }}
           >
-            {/* <GradientText
-              gradient={gradients.yellowPink}
-              fontSize={{ xs: "2rem", lg: "5rem" }}
-            >
-              Arquitectónico
-            </GradientText> */}
             <Typography
               sx={{
                 fontWeight: 500,
@@ -77,25 +43,25 @@ const BannerInView = () => {
                 boxSizing: "border-box",
                 padding: 0,
                 lineHeight: 1,
-                fontSize: { xs: "3rem", lg: "8rem" },
+                fontSize: { xs: "5rem", lg: "10rem" },
               }}
             >
-              Es Fascinante
+              Expertos
             </Typography>
           </Box>
-        </Box>
-      </InView>
-
+        </TranslateScroll>
+      </Box>
       <Box
         sx={{
           width: "100%",
-          height: "50vh",
+          height: "100vh",
           pt: 8,
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
           flexDirection: "column",
           backgroundColor: "#FBDA61",
+          scrollSnapAlign: "center",
           // backgroundImage: "linear-gradient(0deg, #7f87ff, #5598def5)",
         }}
       >
@@ -130,32 +96,34 @@ const BannerInView = () => {
                 fontSize: { xs: "3rem", lg: "4rem" },
               }}
             >
-              ¿ Quieres conocer más ?
+              Calidad garantizada - Los mejores materiales y diseños - Moderno y
+              sofisticados
             </Typography>
           </Box>
         </InView>
       </Box>
 
-      <InView
-        onChange={(inView) => {
-          setText3(inView);
+      <Box
+        sx={{
+          width: "100%",
+          height: "100vh",
+          pt: 8,
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection: "column",
+          color: "white",
+          backgroundImage: `linear-gradient(0deg, #FF5ACD, #FBDA61)`,
+          scrollSnapAlign: "center",
         }}
-        threshold={0.6}
-        rootMargin={"200px 0px 0px 0px"}
-        delay={100}
       >
-        <Box
-          sx={{
-            width: "100%",
-            height: "100vh",
-            pt: 8,
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            flexDirection: "column",
-            color: "white",
-            backgroundImage: `linear-gradient(0deg, #FF5ACD, #FBDA61)`,
+        <InView
+          onChange={(inView) => {
+            setText3(inView);
           }}
+          threshold={0.6}
+          rootMargin={"200px 0px 0px 0px"}
+          delay={100}
         >
           <Box
             sx={{
@@ -198,8 +166,8 @@ const BannerInView = () => {
               servicios
             </Typography>
           </Box>
-        </Box>
-      </InView>
+        </InView>
+      </Box>
 
       <Box
         sx={{
@@ -212,6 +180,7 @@ const BannerInView = () => {
           flexDirection: "column",
           backgroundImage: "linear-gradient(0deg, #ec3d43, #FF5ACD)",
           color: "white",
+          scrollSnapAlign: "center",
         }}
       >
         <InView
@@ -331,9 +300,10 @@ const BannerInView = () => {
           flexDirection: "column",
           backgroundColor: "#ec3d43",
           color: "white",
+          scrollSnapAlign: "center",
         }}
       ></Box>
-    </Box>
+    </>
   );
 };
 

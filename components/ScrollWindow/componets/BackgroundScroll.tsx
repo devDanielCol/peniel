@@ -43,7 +43,7 @@ const BackgroundScroll: FC<IProps> = ({ scroll, children }) => {
         sx={{
           width: "100%",
           height: "100%",
-          filter: `brightness(${opacity}%)`,
+          filter: `grayscale(${opacity}%)`,
           top: 0,
           position: "absolute",
         }}

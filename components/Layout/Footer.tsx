@@ -34,6 +34,8 @@ const Footer = () => {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
+        scrollSnapAlign: "start",
+        scrollSnapStop: "normal",
       }}
     >
       <Box
