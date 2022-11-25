@@ -12,7 +12,7 @@ const BgScrollMove: FC<IBgScrollMoveProps> = ({ scroll }) => {
       <Container
         sx={{
           width: "100%",
-          height: "110vh",
+          height: "100vh",
           justifyContent: "center",
           display: "flex",
           flexDirection: "column",
@@ -29,7 +29,6 @@ const BgScrollMove: FC<IBgScrollMoveProps> = ({ scroll }) => {
             fontSize: { xs: "2rem", lg: "7rem" },
             textAlign: "left",
             color: "white",
-            filter: "brightness(0.33)",
           }}
         >
           Diseño
@@ -45,7 +44,6 @@ const BgScrollMove: FC<IBgScrollMoveProps> = ({ scroll }) => {
             fontSize: { xs: "3rem", lg: "7rem" },
             textAlign: "left",
             color: "white",
-            filter: "brightness(0.66)",
           }}
         >
           Calidad
@@ -69,7 +67,6 @@ const BgScrollMove: FC<IBgScrollMoveProps> = ({ scroll }) => {
               fontSize: { xs: "3.7rem", lg: "7rem" },
               textAlign: "left",
               color: "white",
-              filter: "brightness(1)",
             }}
           >
             Inovacion

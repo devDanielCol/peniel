@@ -25,12 +25,25 @@ export default function Home() {
 
   return (
     <Content title="Home | Peniel construcciones">
-      <BannerPrincipal />
-      <LeftSectionGrid scroll={scroll} />
-      <RightSectionGrid scroll={scroll} />
-      <BgScrollMove scroll={scroll} />
-      <BannerInView />
-      <ServicesList />
+      <Box sx={{ scrollSnapAlign: "center", scrollSnapStop: "always" }}>
+        <BannerPrincipal />
+      </Box>
+      <Box sx={{ scrollSnapAlign: "center", scrollSnapStop: "always" }}>
+        <LeftSectionGrid scroll={scroll} />
+      </Box>
+      <Box sx={{ scrollSnapAlign: "center", scrollSnapStop: "always" }}>
+        <RightSectionGrid scroll={scroll} />
+      </Box>
+      <Box sx={{ scrollSnapAlign: "center", scrollSnapStop: "always" }}>
+        <BgScrollMove scroll={scroll} />
+      </Box>
+      <Box sx={{ scrollSnapAlign: "center", scrollSnapStop: "always" }}>
+        <BannerInView scroll={scroll} />
+      </Box>
+      <Box sx={{ scrollSnapAlign: "start", scrollSnapStop: "always" }}>
+        <ServicesList />
+      </Box>
+
       <Dialog open={open} maxWidth="lg">
         <DialogTitle sx={{ display: "flex", justifyContent: "flex-end" }}>
           <IconButton
