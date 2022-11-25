@@ -31,21 +31,35 @@ const BackgroundScroll: FC<IProps> = ({ scroll, children }) => {
   }, [scroll]);
 
   return (
-    <Box sx={{ width: "100%", height: "150vh", position: "relative" }}>
+    <Box
+      ref={ref}
+      sx={{
+        width: "100%",
+        height: "fit-content",
+        position: "relative",
+      }}
+    >
       <Box
-        ref={ref}
         sx={{
           width: "100%",
-          height: "70%",
-          backgroundPosition: "center",
-          backgroundImage: "url(/image/home2.jpg)",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
+          height: "100%",
           filter: `brightness(${opacity}%)`,
+          top: 0,
           position: "absolute",
         }}
-      ></Box>
-      <Box sx={{ width: "100%", height: "100%", position: "relative" }}>
+      >
+        <Box
+          sx={{
+            width: "100%",
+            height: "100%",
+            backgroundPosition: "center",
+            backgroundImage: "url(/image/home3.jpg)",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+          }}
+        ></Box>
+      </Box>
+      <Box sx={{ width: "100%", height: "100%", position: "relative", top: 0 }}>
         {children}
       </Box>
     </Box>
