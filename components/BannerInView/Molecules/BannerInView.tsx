@@ -69,6 +69,12 @@ const BannerInView = () => {
 
       <Box
         sx={{
+          width: "100%",
+          height: "100vh",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection: "column",
           backgroundColor: "#FBDA61",
           scrollSnapAlign: "center",
           scrollSnapStop: "always",
@@ -134,7 +140,6 @@ const BannerInView = () => {
                   en Construccion y Acabados
                 </Typography>
               </Grid>
-              <Grid item xs={12} md={5} sx={{ height: "100%" }}></Grid>
             </Grid>
           </Container>
         </InView>
@@ -165,9 +170,8 @@ const BannerInView = () => {
         >
           <Box
             sx={{
-              transform: text3 ? "translateY(0%)" : "translateY(-200%)",
-              opacity: text3 ? "100%" : "0%",
-              transition: "all .5s linear",
+              width: "100%",
+              height: "100vh",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
@@ -176,6 +180,9 @@ const BannerInView = () => {
           >
             <Typography
               sx={{
+                transform: text3 ? "translateY(0%)" : "translateY(-150%)",
+                opacity: text3 ? "100%" : "0%",
+                transition: "all .5s linear",
                 fontWeight: 500,
                 zIndex: 1,
                 boxSizing: "border-box",
@@ -188,6 +195,9 @@ const BannerInView = () => {
             </Typography>
             <Typography
               sx={{
+                transform: text3 ? "translateY(0%)" : "translateY(150%)",
+                opacity: text3 ? "100%" : "0%",
+                transition: "all .5s linear",
                 fontWeight: 500,
                 zIndex: 1,
                 boxSizing: "border-box",
@@ -230,20 +240,20 @@ const BannerInView = () => {
           rootMargin={"200px 0px 0px 0px"}
           delay={100}
         >
-          {" "}
           <Box
             sx={{
-              transform: text4 ? "translateY(0%)" : "translateY(100%)",
-              opacity: text4 ? "100%" : "0%",
-              transition: "all .5s linear",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
               flexDirection: "column",
+              overflow: "hidden",
             }}
           >
             <Typography
               sx={{
+                transform: text4 ? "translateX(0%)" : "translateX(-100%)",
+                opacity: text4 ? "100%" : "0%",
+                transition: "all .5s linear",
                 fontWeight: 500,
                 zIndex: 1,
                 boxSizing: "border-box",
@@ -269,7 +279,13 @@ const BannerInView = () => {
             >
               Conoce toda la lista de servicios que tenemos disponibles para ti
             </Typography>
-            <Box>
+            <Box
+              sx={{
+                transform: text4 ? "translateX(0%)" : "translateX(100%)",
+                opacity: text4 ? "100%" : "0%",
+                transition: "all .5s linear",
+              }}
+            >
               <IconButton
                 color="inherit"
                 sx={{
@@ -354,7 +370,7 @@ const BannerInView = () => {
             lineHeight: 1,
             fontSize: { xs: "3rem", lg: "7rem" },
             textAlign: "center",
-            maxWidth: { xs: "100%", lg: "60%" },
+            maxWidth: { xs: "95%", lg: "60%" },
           }}
         >
           Mas contenido en esta parte
