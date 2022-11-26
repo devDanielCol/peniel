@@ -37,9 +37,7 @@ export default function Home() {
       <Box sx={{ scrollSnapAlign: "center", scrollSnapStop: "always" }}>
         <BgScrollMove scroll={scroll} />
       </Box>
-      <Box sx={{ scrollSnapAlign: "center", scrollSnapStop: "always" }}>
-        <BannerInView />
-      </Box>
+      <BannerInView />
       <Box sx={{ scrollSnapAlign: "start", scrollSnapStop: "always" }}>
         <ServicesList />
       </Box>
