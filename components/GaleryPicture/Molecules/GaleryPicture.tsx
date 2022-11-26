@@ -20,12 +20,13 @@ export default function GaleryPicture() {
           clickable: true,
         }}
         navigation={true}
+        height={500}
         modules={[Pagination, Navigation]}
       >
         <SwiperSlide>
           <Box
             sx={{
-              height: "80vh",
+              height: { xs: "250px", lg: "500px" },
               backgroundImage: "url(/image/home2.jpg)",
               backgroundPosition: "center",
               backgroundSize: "contain",
@@ -36,7 +37,7 @@ export default function GaleryPicture() {
         <SwiperSlide>
           <Box
             sx={{
-              height: "500px",
+              height: { xs: "250px", lg: "500px" },
               backgroundImage: "url(/image/home3.jpg)",
               backgroundPosition: "center",
               backgroundSize: "contain",
@@ -47,7 +48,7 @@ export default function GaleryPicture() {
         <SwiperSlide>
           <Box
             sx={{
-              height: "80vh",
+              height: { xs: "250px", lg: "500px" },
               backgroundImage: "url(/image/home2.jpg)",
               backgroundPosition: "center",
               backgroundSize: "contain",
@@ -58,7 +59,7 @@ export default function GaleryPicture() {
         <SwiperSlide>
           <Box
             sx={{
-              height: "80vh",
+              height: { xs: "250px", lg: "500px" },
               backgroundImage: "url(/image/home2.jpg)",
               backgroundPosition: "center",
               backgroundSize: "contain",
@@ -69,7 +70,7 @@ export default function GaleryPicture() {
         <SwiperSlide>
           <Box
             sx={{
-              height: "80vh",
+              height: { xs: "250px", lg: "500px" },
               backgroundImage: "url(/image/home2.jpg)",
               backgroundPosition: "center",
               backgroundSize: "contain",
@@ -80,40 +81,7 @@ export default function GaleryPicture() {
         <SwiperSlide>
           <Box
             sx={{
-              height: "80vh",
-              backgroundImage: "url(/image/home2.jpg)",
-              backgroundPosition: "center",
-              backgroundSize: "contain",
-              backgroundRepeat: "no-repeat",
-            }}
-          ></Box>
-        </SwiperSlide>{" "}
-        <SwiperSlide>
-          <Box
-            sx={{
-              height: "80vh",
-              backgroundImage: "url(/image/home2.jpg)",
-              backgroundPosition: "center",
-              backgroundSize: "contain",
-              backgroundRepeat: "no-repeat",
-            }}
-          ></Box>
-        </SwiperSlide>{" "}
-        <SwiperSlide>
-          <Box
-            sx={{
-              height: "80vh",
-              backgroundImage: "url(/image/home2.jpg)",
-              backgroundPosition: "center",
-              backgroundSize: "contain",
-              backgroundRepeat: "no-repeat",
-            }}
-          ></Box>
-        </SwiperSlide>{" "}
-        <SwiperSlide>
-          <Box
-            sx={{
-              height: "80vh",
+              height: { xs: "280px", lg: "500px" },
               backgroundImage: "url(/image/home2.jpg)",
               backgroundPosition: "center",
               backgroundSize: "contain",

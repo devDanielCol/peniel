@@ -48,30 +48,53 @@ const BgScrollMove: FC<IBgScrollMoveProps> = ({ scroll }) => {
         >
           Calidad
         </Typography>
-        <Box
+        <Typography
           sx={{
-            width: "100%",
-            height: "10rem",
-            position: "sticky",
-            top: 80,
+            fontWeight: 500,
+            zIndex: 1,
+            boxSizing: "border-box",
+            padding: 0,
+            ml: { xs: 14, lg: 40 },
+            lineHeight: 1,
+            fontSize: { xs: "3.7rem", lg: "7rem" },
+            textAlign: "left",
+            color: "white",
           }}
         >
-          <Typography
-            sx={{
-              fontWeight: 500,
-              zIndex: 1,
-              boxSizing: "border-box",
-              padding: 0,
-              ml: { xs: 14, lg: 40 },
-              lineHeight: 1,
-              fontSize: { xs: "3.7rem", lg: "7rem" },
-              textAlign: "left",
-              color: "white",
-            }}
-          >
-            Inovacion
-          </Typography>
-        </Box>
+          Inovacion
+        </Typography>
+        <Typography
+          sx={{
+            fontWeight: 500,
+            zIndex: 1,
+            boxSizing: "border-box",
+            padding: 0,
+            ml: { xs: 7, lg: 20 },
+            lineHeight: 1,
+            fontSize: { xs: "3rem", lg: "7rem" },
+            textAlign: "left",
+            color: "white",
+            opacity: 0.75,
+          }}
+        >
+          Calidad
+        </Typography>
+        <Typography
+          sx={{
+            fontWeight: 500,
+            zIndex: 1,
+            boxSizing: "border-box",
+            padding: 0,
+            m: 0,
+            lineHeight: 1,
+            fontSize: { xs: "2rem", lg: "7rem" },
+            textAlign: "left",
+            color: "white",
+            opacity: 0.5,
+          }}
+        >
+          Diseño
+        </Typography>
       </Container>
     </BackgroundScroll>
   );

@@ -1,15 +1,21 @@
 import { Container } from "@mui/system";
-import { FC, useState } from "react";
+import { FC } from "react";
 import gradients from "../../styles/colors/gradients";
 import GradientText from "../GradientText/GradientText";
-import MouseMoveContent from "../MouseMoveCard/MouseMoveCard";
 
 const BannerPrincipal: FC = () => {
-  const [gradient, setGradient] = useState<number>(0);
-
   return (
-    <Container sx={{ zIndex: "-1" }}>
-      <MouseMoveContent
+    <Container
+      sx={{
+        zIndex: "-1",
+        width: "100%",
+        height: "100vh",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      {/* <MouseMoveContent
         onMove={({ centerX, pageX, pageY, width, height, centerY }) => {
           const dX = pageX - centerX;
           const dY = pageY - centerY;
@@ -22,23 +28,23 @@ const BannerPrincipal: FC = () => {
           justifyContent: "center",
           alignItems: "center",
         }}
+      > */}
+      <GradientText
+        fontSize={{
+          xs: "90px",
+          sm: "110px",
+          md: "120px",
+          lg: "180px",
+        }}
+        textAlign={{ xs: "center", md: "center" }}
+        letterSpacing={{ xs: "-2px", sm: "-3px" }}
+        // gradient={`radial-gradient( circle at ${gradient}%,#5d309e,#995bff)`}
+        gradient={gradients.yellowPink}
+        sx={{ ml: 1 }}
       >
-        <GradientText
-          fontSize={{
-            xs: "90px",
-            sm: "110px",
-            md: "120px",
-            lg: "180px",
-          }}
-          textAlign={{ xs: "center", md: "center" }}
-          letterSpacing={{ xs: "-2px", sm: "-3px" }}
-          // gradient={`radial-gradient( circle at ${gradient}%,#5d309e,#995bff)`}
-          gradient={gradients.yellowPink}
-          sx={{ ml: 1 }}
-        >
-          Peniel
-        </GradientText>
-      </MouseMoveContent>
+        Peniel
+      </GradientText>
+      {/* </MouseMoveContent> */}
     </Container>
   );
 };

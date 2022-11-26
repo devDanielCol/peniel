@@ -20,3 +20,17 @@ export const animationZoom = {
     },
   },
 };
+export const waveMove = (delay: number, skip: boolean) => {
+  if (skip) {
+    return {
+      animation: `wave 1s cubic-bezier(0.5,0,0.5,1) ${delay}ms 3 alternate`,
+      "@keyframes wave": {
+        "0%": { transform: "translateY(0px)" },
+        "50%": { transform: "translateY(-30%)" },
+        to: { transform: "translateY(0px)" },
+      },
+    };
+  }
+
+  return {};
+};

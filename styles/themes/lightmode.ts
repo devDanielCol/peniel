@@ -85,6 +85,17 @@ const lightThemeOption = {
         },
       },
     },
+    MuiDialog: {
+      styleOverrides: {
+        container: {
+          backdropFilter: "blur(3px)",
+        },
+        paper: {
+          backgroundColor: "#000",
+          backgroundImage: "none",
+        },
+      },
+    },
   },
 };
 
