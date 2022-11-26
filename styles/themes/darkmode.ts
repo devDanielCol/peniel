@@ -83,6 +83,17 @@ const darkThemeOption = {
         },
       },
     },
+    MuiDialog: {
+      styleOverrides: {
+        container: {
+          backdropFilter: "blur(3px)",
+        },
+        paper: {
+          backgroundColor: "#111",
+          backgroundImage: "none",
+        },
+      },
+    },
   },
 };
 

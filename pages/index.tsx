@@ -9,7 +9,7 @@ import RightSectionGrid from "../components/Home/RightSectionGrid/RightSectionGr
 import ServicesList from "../components/Home/ServicesList/ServicesList";
 import BgScrollMove from "../components/Home/BgScrollMove/BgScrollMove";
 import GaleryPicture from "../components/GaleryPicture/Molecules/GaleryPicture";
-import { Box, Dialog, DialogTitle, IconButton } from "@mui/material";
+import { Box, Dialog, IconButton } from "@mui/material";
 import DoNotDisturbOnIcon from "@mui/icons-material/DoNotDisturbOn";
 
 export default function Home() {
@@ -38,33 +38,55 @@ export default function Home() {
         <BgScrollMove scroll={scroll} />
       </Box>
       <Box sx={{ scrollSnapAlign: "center", scrollSnapStop: "always" }}>
-        <BannerInView scroll={scroll} />
+        <BannerInView />
       </Box>
       <Box sx={{ scrollSnapAlign: "start", scrollSnapStop: "always" }}>
         <ServicesList />
       </Box>
 
-      <Dialog open={open} maxWidth="lg">
-        <DialogTitle sx={{ display: "flex", justifyContent: "flex-end" }}>
+      <Dialog
+        open={open}
+        maxWidth="md"
+        fullWidth
+        sx={{
+          height: 700,
+        }}
+      >
+        <Box sx={{ position: "relative" }}>
           <IconButton
+            sx={{ position: "absolute", right: 0, zIndex: 100 }}
             onClick={() => {
               setOpen(!open);
             }}
           >
             <DoNotDisturbOnIcon color="error" />
           </IconButton>
-        </DialogTitle>
-        <Box>
           <GaleryPicture />
         </Box>
       </Dialog>
-      <IconButton
-        onClick={() => {
-          setOpen(!open);
+
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          p: 2,
         }}
       >
-        <DoNotDisturbOnIcon color="error" />
-      </IconButton>
+        <IconButton
+          onClick={() => {
+            setOpen(!open);
+          }}
+          sx={{
+            backgroundColor: "lightgray",
+            borderRadius: 2,
+            p: 1.5,
+            color: "gray",
+          }}
+        >
+          Ver las fotos del catalogo
+        </IconButton>
+      </Box>
     </Content>
   );
 }
