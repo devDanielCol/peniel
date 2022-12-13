@@ -9,9 +9,10 @@ const EndPage: FC = () => {
     <Box
       sx={{
         position: "relative",
-        height: "50vh",
+        height: "70vh",
         backgroundColor: "transparent",
         backgroundImage: "linear-gradient(18deg,#1156B6 33%,#00062D 100%)",
+        overflow: "hidden",
       }}
     >
       <Box
@@ -21,6 +22,7 @@ const EndPage: FC = () => {
           width: "100%",
           height: "100%",
           zIndex: 2,
+          px: 3,
         }}
       >
         <Box
@@ -37,24 +39,23 @@ const EndPage: FC = () => {
               setInview(inView);
             }}
             threshold={1}
-            delay={0}
+            delay={500}
           >
             <Box
               sx={{
                 opacity: inview ? 1 : 0,
                 transition: "all .4s linear",
-                fontSize: { xs: "1.5rem", sm: "2rem", lg: "3rem" },
+                fontSize: { xs: "2.2rem", sm: "2rem", lg: "3rem" },
                 fontWeight: 500,
                 color: "white",
                 lineHeight: 1,
-                maxWidth: "90%",
-                letterSpacing: "-2px",
+                letterSpacing: "0px",
                 textAlign: "center",
                 marginRight: "0px",
                 paddingRight: "0px",
               }}
             >
-              Lo mejor del mundo en construcciones y acabados
+              Recibe una asesoría gratis!
             </Box>
           </InView>
         </Box>

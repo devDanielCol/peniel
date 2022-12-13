@@ -1,20 +1,13 @@
-import {
-  Container,
-  Box,
-  Typography,
-  IconButton,
-  Avatar,
-  Grid,
-} from "@mui/material";
+import { Container, Box, Typography, Grid } from "@mui/material";
 import { FC, useState } from "react";
 import { InView } from "react-intersection-observer";
 import CloudDownloadIcon from "@mui/icons-material/CloudDownload";
 
 interface ILeftSectionGridProps {
-  scroll: number;
+  scroll?: number;
 }
 
-const LeftSectionGrid: FC<ILeftSectionGridProps> = ({ scroll }) => {
+const LeftSectionGrid: FC<ILeftSectionGridProps> = () => {
   const [inView, setInView] = useState<boolean>(false);
 
   return (
@@ -36,20 +29,25 @@ const LeftSectionGrid: FC<ILeftSectionGridProps> = ({ scroll }) => {
           sx={{
             display: "flex",
             flexDirection: "column",
-            py: "8rem",
+            py: { xs: "4rem", md: "8rem" },
+            px: 2,
             transform: inView ? "translateX(0%)" : "translateX(-100vw)",
             transition: "all .5s linear",
             overflow: "hidden",
           }}
         >
           <Typography
-            sx={{ fontSize: "2rem", textAlign: "center", lineHeight: 1 }}
+            sx={{
+              fontSize: { xs: "1.8rem", md: "2rem" },
+              textAlign: "center",
+              lineHeight: 1,
+            }}
           >
             Te damos la{" "}
             <Typography
               sx={{
                 mt: 5,
-                fontSize: "2rem",
+                fontSize: { xs: "1.8rem", md: "2rem" },
                 color: "#ff4d4d",
               }}
               component="span"
@@ -61,7 +59,7 @@ const LeftSectionGrid: FC<ILeftSectionGridProps> = ({ scroll }) => {
           <Typography
             sx={{
               mt: { xs: 4, md: 2 },
-              fontSize: "3rem",
+              fontSize: { xs: "2.2rem", md: "3rem" },
               textAlign: "center",
               fontWeight: 700,
               lineHeight: 1,
@@ -72,7 +70,7 @@ const LeftSectionGrid: FC<ILeftSectionGridProps> = ({ scroll }) => {
           <Typography
             sx={{
               mt: "4rem",
-              fontSize: { xs: "1.2rem", md: "1.5rem" },
+              fontSize: { xs: "1.1rem", md: "1.5rem" },
               textAlign: "center",
             }}
           >
@@ -80,7 +78,7 @@ const LeftSectionGrid: FC<ILeftSectionGridProps> = ({ scroll }) => {
             <Typography
               sx={{
                 mt: 5,
-                fontSize: "1.5rem",
+                fontSize: { xs: "1.1rem", md: "1.5rem" },
                 color: "#ff4d4d",
               }}
               component="span"

@@ -11,7 +11,7 @@ const BannerPrincipal: FC = () => {
     <Box
       sx={{
         position: "relative",
-        height: "100vh",
+        height: { xs: "80vh", md: "100vh" },
         backgroundColor: "transparent",
         backgroundImage: gradients.orangeYellow,
       }}
@@ -21,8 +21,9 @@ const BannerPrincipal: FC = () => {
           top: 0,
           position: "absolute",
           width: "100%",
-          height: "100vh",
+          height: "100%",
           zIndex: 2,
+          px: 2,
         }}
       >
         {/* <MouseMoveContent
@@ -42,7 +43,7 @@ const BannerPrincipal: FC = () => {
         <Box
           sx={{
             width: "100%",
-            height: "100vh",
+            height: "100%",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -80,13 +81,11 @@ const BannerPrincipal: FC = () => {
                 Peniel
               </GradientText>
               <Box
-                component={"h2"}
                 sx={{
                   fontSize: { xs: "1.5rem", sm: "2rem", lg: "3rem" },
                   fontWeight: 500,
                   color: "white",
                   lineHeight: 1,
-                  maxWidth: "90%",
                   letterSpacing: "-2px",
                   mt: 3,
                 }}

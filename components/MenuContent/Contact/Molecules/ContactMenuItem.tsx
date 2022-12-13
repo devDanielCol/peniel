@@ -11,26 +11,31 @@ export const socialMedia = [
     name: "Facebook",
     icon: <FacebookRoundedIcon />,
     description: "Siguenos y comparte",
+    href: "/",
   },
   {
     name: "Instagram",
     icon: <InstagramIcon />,
     description: "Mira imagenes y videos",
+    href: "/",
   },
   {
     name: "WhatsApp",
     icon: <WhatsAppIcon />,
     description: "Envianos un mensaje",
+    href: "https://wa.me/3203379213",
   },
   {
     name: "Email",
     icon: <AlternateEmailRoundedIcon />,
     description: "Solicitanos informacion",
+    href: "mailto:construccionesyacabadospeniel@gmail.com",
   },
   {
     name: "Telefono",
     icon: <PermPhoneMsgRoundedIcon />,
     description: "Agenda una asesoria",
+    href: "tel:3203379213",
   },
 ];
 
@@ -44,8 +49,9 @@ const ToolpitOpt = () => {
         py: 4,
       }}
     >
-      {socialMedia.map(({ name, description, icon }, i) => (
+      {socialMedia.map(({ name, description, icon, href }, i) => (
         <ContactOpt
+          linkTo={href}
           key={i}
           icon={icon}
           title={name}

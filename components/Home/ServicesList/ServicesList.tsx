@@ -1,4 +1,5 @@
-import { Container, Box, Typography } from "@mui/material";
+import { Container, Box } from "@mui/material";
+import GradientText from "../../GradientText/GradientText";
 import SlideServices from "../../SlideServices/Molecules/SlideServices";
 
 const ServicesList = () => {
@@ -14,21 +15,22 @@ const ServicesList = () => {
             pt: 12,
           }}
         >
-          <Typography
+          <GradientText
+            fontSize={{ xs: "3rem", lg: "4rem" }}
             sx={{
-              fontWeight: 500,
+              fontWeight: 900,
               zIndex: 1,
               boxSizing: "border-box",
               padding: 0,
               m: 0,
               lineHeight: 1,
-              fontSize: { xs: "3rem", lg: "4rem" },
               textAlign: "center",
               maxWidth: { xs: "100%", lg: "50%" },
             }}
+            gradient={"linear-gradient(to right, #494949, #000000)"}
           >
-            Nuestra lista de servicios
-          </Typography>
+            Lista de servicios
+          </GradientText>
         </Box>
       </Container>
       <Box sx={{ width: "100%", my: 10 }}>
