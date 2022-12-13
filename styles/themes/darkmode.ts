@@ -2,7 +2,7 @@ const darkThemeOption = {
   palette: {
     mode: "dark",
     primary: {
-      main: "#4e317e",
+      main: "#ff4d4d",
       dark: "#ff4d4d",
       light: "#f9cb28",
     },
@@ -36,6 +36,7 @@ const darkThemeOption = {
     },
     custom: {
       navbar: "#000000cc",
+      text: "#fff",
       callaction: "#fff",
       section1: "#0b0513",
     },

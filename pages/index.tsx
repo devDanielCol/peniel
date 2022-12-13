@@ -3,14 +3,15 @@ import BannerPrincipal from "../components/BannerPrincipal/BannerPrincipal";
 import Content from "../components/Layout/Content/General";
 import ScrollTrigger from "../components/ScrollWindow/ScrollTrigger";
 import isNavigator from "../util/helpers/isNavigator";
-import BannerInView from "../components/BannerInView/Molecules/BannerInView";
 import LeftSectionGrid from "../components/Home/LeftSectionGrid/LeftSectionGrind";
 import RightSectionGrid from "../components/Home/RightSectionGrid/RightSectionGrid";
 import ServicesList from "../components/Home/ServicesList/ServicesList";
-import BgScrollMove from "../components/Home/BgScrollMove/BgScrollMove";
 import GaleryPicture from "../components/GaleryPicture/Molecules/GaleryPicture";
 import { Box, Dialog, IconButton } from "@mui/material";
 import DoNotDisturbOnIcon from "@mui/icons-material/DoNotDisturbOn";
+import OurClients from "../components/Home/OurClients/OurClients";
+import OurWork from "../components/Home/OurWork/OurWork";
+import EndPage from "../components/Home/EndPage/EndPage";
 
 export default function Home() {
   const currentScroll = (isNavigator() && self.scrollY) || 0;
@@ -25,23 +26,13 @@ export default function Home() {
 
   return (
     <Content title="Home | Peniel construcciones">
-      <Box sx={{ scrollSnapAlign: "center", scrollSnapStop: "always" }}>
-        <BannerPrincipal />
-      </Box>
-      <Box sx={{ scrollSnapAlign: "center", scrollSnapStop: "always" }}>
-        <LeftSectionGrid scroll={scroll} />
-      </Box>
-      <Box sx={{ scrollSnapAlign: "center", scrollSnapStop: "always" }}>
-        <RightSectionGrid scroll={scroll} />
-      </Box>
-      <Box sx={{ scrollSnapAlign: "center", scrollSnapStop: "always" }}>
-        <BgScrollMove scroll={scroll} />
-      </Box>
-      <BannerInView />
-      <Box sx={{ scrollSnapAlign: "start", scrollSnapStop: "always" }}>
-        <ServicesList />
-      </Box>
-
+      <BannerPrincipal />
+      <LeftSectionGrid scroll={scroll} />
+      <RightSectionGrid scroll={scroll} />
+      <OurClients />
+      <OurWork />
+      <EndPage />
+      <ServicesList />
       <Dialog
         open={open}
         maxWidth="md"
@@ -62,7 +53,6 @@ export default function Home() {
           <GaleryPicture />
         </Box>
       </Dialog>
-
       <Box
         sx={{
           display: "flex",

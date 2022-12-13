@@ -50,7 +50,7 @@ const MenuToolpit: FC<IMenuToolpitProps> = ({
           display: "flex",
           ml: 2,
           alignItems: "center",
-          color: "text.primary",
+          color: "custom.navbartext",
         }}
       >
         <Typography
@@ -58,10 +58,8 @@ const MenuToolpit: FC<IMenuToolpitProps> = ({
             fontWeight: 500,
             alignItems: "center",
             transition: "all .2s linear",
-            opacity: open ? "70%" : "100%",
             lineHeight: 1,
-            textDecoration: open ? "underline" : "none",
-            color: "text.primary",
+            color: "inherit",
           }}
           component="span"
         >
@@ -70,10 +68,10 @@ const MenuToolpit: FC<IMenuToolpitProps> = ({
         <ExpandMoreIcon
           className="icon__expand-more"
           sx={{
-            opacity: open ? "100%" : "30%",
+            opacity: open ? "100%" : "0%",
             transition: "all .2s linear",
             transform: open ? "translateY(3px)" : "translateY(0px)",
-            color: "text.primary",
+            color: "custom.navbartext",
           }}
         />
       </Box>

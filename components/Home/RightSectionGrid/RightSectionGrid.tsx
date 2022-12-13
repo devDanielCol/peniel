@@ -1,61 +1,115 @@
-import { Container, Grid, Typography } from "@mui/material";
-import { FC } from "react";
-import OpacityScroll from "../../ScrollWindow/componets/OpacityScroll";
+import {
+  Container,
+  Box,
+  Typography,
+  IconButton,
+  Avatar,
+  Grid,
+} from "@mui/material";
+import { FC, useState } from "react";
+import { InView } from "react-intersection-observer";
+import CloudDownloadIcon from "@mui/icons-material/CloudDownload";
+import { waveMove } from "../../../styles/animation/keyframes/zoomScale";
 
-interface IRightSectionGridProps {
+interface ILeftSectionGridProps {
   scroll: number;
 }
 
-const RightSectionGrid: FC<IRightSectionGridProps> = ({ scroll }) => {
+const LeftSectionGrid: FC<ILeftSectionGridProps> = ({ scroll }) => {
+  const [inView, setInView] = useState<boolean>(false);
+  const [text, setText] = useState<boolean>(false);
+
   return (
-    <OpacityScroll scroll={scroll}>
-      <Container sx={{ width: "100%", height: "110vh" }}>
-        <Grid container>
-          <Grid item xs={12} md={5} sx={{ height: "100%" }}></Grid>
-          <Grid
-            item
-            xs={12}
-            md={7}
+    <Box sx={{ backgroundColor: "#0a0f11", color: "white" }}>
+      <InView
+        onChange={(inView) => {
+          setInView(inView);
+          console.log(inView);
+        }}
+        threshold={0.25}
+      >
+        <Container
+          sx={{
+            width: "100%",
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          <Box
             sx={{
-              height: "100vh",
-              justifyContent: "center",
               display: "flex",
               flexDirection: "column",
+              py: "8rem",
+              transform: inView ? "translateX(0%)" : "translateX(-100vw)",
+              transition: "all .5s linear",
+              overflow: "hidden",
             }}
           >
+            <InView
+              onChange={(inView) => {
+                setText(inView);
+              }}
+              threshold={0.6}
+              rootMargin={"200px 0px 0px 0px"}
+              delay={100}
+            >
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  flexDirection: "row",
+                }}
+              >
+                {"Expertos".split("").map((letter, index) => (
+                  <Typography
+                    key={index}
+                    sx={{
+                      fontWeight: 500,
+                      zIndex: 1,
+                      boxSizing: "border-box",
+                      padding: 0,
+                      lineHeight: 1,
+                      fontSize: { xs: "3.5rem", lg: "7rem" },
+                      transition: "all .4s linear",
+                      display: "flex",
+                      ...waveMove(index * 100, text),
+                    }}
+                  >
+                    {letter}
+                  </Typography>
+                ))}
+              </Box>
+            </InView>
             <Typography
               sx={{
-                fontWeight: 500,
-                zIndex: 1,
-                boxSizing: "border-box",
-                padding: 0,
-                m: 0,
-                lineHeight: 1,
-                fontSize: { xs: "3rem", lg: "7rem" },
-                textAlign: "left",
+                mt: "4rem",
+                fontSize: { xs: "1.2rem", md: "1.5rem" },
+                textAlign: "center",
+                color: "#90a4ae",
               }}
             >
-              Moderno y de calidad
+              The7 is the{" "}
+              <Typography
+                sx={{
+                  mt: 5,
+                  fontSize: "1.5rem",
+                  color: "white",
+                }}
+                component="span"
+              >
+                most customizable
+              </Typography>{" "}
+              The7 comes with 60+ prebuilt dummy websites complete with
+              exclusive templates for Elementor, WPBakery Page Builder & Slider
+              Revolution. Import them in a single click. Mix, match, change.
+              Create a perfect foundation for your new website in minutes!
             </Typography>
-            <Typography
-              sx={{
-                fontWeight: 300,
-                zIndex: 1,
-                boxSizing: "border-box",
-                padding: 0,
-                m: 0,
-                lineHeight: 1,
-                fontSize: { xs: "1rem", lg: "3rem" },
-                textAlign: "left",
-              }}
-            >
-              diseño y confort
-            </Typography>
-          </Grid>
-        </Grid>
-      </Container>
-    </OpacityScroll>
+          </Box>
+        </Container>
+      </InView>
+    </Box>
   );
 };
 
-export default RightSectionGrid;
+export default LeftSectionGrid;
