@@ -11,7 +11,7 @@ const BannerPrincipal: FC = () => {
     <Box
       sx={{
         position: "relative",
-        height: { xs: "80vh", md: "100vh" },
+        height: { xs: "70vh", md: "100vh" },
         backgroundColor: "transparent",
         backgroundImage: gradients.orangeYellow,
       }}
@@ -86,7 +86,7 @@ const BannerPrincipal: FC = () => {
                   fontWeight: 500,
                   color: "white",
                   lineHeight: 1,
-                  letterSpacing: "-2px",
+                  letterSpacing: { xs: "0px", md: "-2px" },
                   mt: 3,
                 }}
               >
@@ -103,7 +103,7 @@ const BannerPrincipal: FC = () => {
           top: 0,
           position: "absolute",
           width: "100vw",
-          height: "100vh",
+          height: { xs: "70vh", md: "100vh" },
           backgroundImage: "url(/image/bgt1.svg)",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",

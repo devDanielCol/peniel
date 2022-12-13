@@ -2,6 +2,7 @@ import { Container, Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import { FC, useState } from "react";
 import { InView } from "react-intersection-observer";
+import useTheme from "../../../util/hooks/useTheme";
 
 interface IRightSectionGridProps {
   scroll?: number;
@@ -10,8 +11,10 @@ interface IRightSectionGridProps {
 const OurWork: FC<IRightSectionGridProps> = () => {
   const [inview, setInview] = useState<boolean>(false);
 
+  const theme = useTheme();
+
   return (
-    <Box sx={{ backgroundColor: "white" }}>
+    <Box sx={{ backgroundColor: theme.palette.background.paper, pt: 3 }}>
       <Container
         maxWidth="xl"
         sx={{
@@ -19,7 +22,30 @@ const OurWork: FC<IRightSectionGridProps> = () => {
           py: 5,
         }}
       >
-        <Grid container sx={{ px: 2 }}>
+        <Grid container sx={{ px: 5 }}>
+          <Grid
+            item
+            xs={12}
+            md={5}
+            sx={{
+              height: "100%",
+              justifyContent: "center",
+              display: { xs: "flex", md: "none" },
+              flexDirection: "column",
+            }}
+          >
+            <Box
+              sx={{
+                backgroundImage: "url(/image/pcwork.webp)",
+                width: "100%",
+                height: { xs: "300px", md: "600px" },
+                backgroundPosition: "center",
+                backgroundSize: "contain",
+                backgroundRepeat: "no-repeat",
+                zIndex: 1,
+              }}
+            ></Box>
+          </Grid>
           <Grid
             item
             xs={12}
@@ -28,7 +54,7 @@ const OurWork: FC<IRightSectionGridProps> = () => {
               justifyContent: "center",
               display: "flex",
               flexDirection: "column",
-              pl: { xs: 0, md: "4rem" },
+              pr: { xs: 0, md: "4rem" },
             }}
           >
             <InView
@@ -41,7 +67,7 @@ const OurWork: FC<IRightSectionGridProps> = () => {
                 sx={{
                   transition: "all .5s linear",
                   transform: {
-                    xs: inview ? "translateY(0px)" : "translateY(50vw)",
+                    xs: inview ? "translateY(0px)" : "translateY(-50vw)",
                     md: inview ? "translateX(0px)" : "translateX(50vw)",
                   },
                   zIndex: -1,
@@ -79,6 +105,31 @@ const OurWork: FC<IRightSectionGridProps> = () => {
                 </Typography>
               </Box>
             </InView>
+            <Typography
+              sx={{
+                fontWeight: 300,
+                boxSizing: "border-box",
+                padding: 0,
+                m: 0,
+                lineHeight: 1.5,
+                fontSize: { xs: "1rem", lg: "1.3rem" },
+                textAlign: { xs: "center", md: "left" },
+                mt: { xs: 2, md: 5 },
+              }}
+            >
+              The7 extends Elementor’s Theme Builder feature. It allows the
+              customization of almost any place on your website. But unlike
+              vanilla Elementor, you can also create floating headers that
+              change size and colors on scroll, fully customize your
+              WooCommerce, build mega menus, etc.
+            </Typography>
+            <Box component={"ul"} sx={{ lineHeight: 2 }}>
+              <Box component={"li"}>Acabados</Box>
+              <Box component={"li"}>Laminados</Box>
+              <Box component={"li"}>Remodelaciones</Box>
+              <Box component={"li"}>Techos</Box>
+              <Box component={"li"}>Acabados</Box>
+            </Box>
           </Grid>
           <Grid
             item
@@ -87,7 +138,7 @@ const OurWork: FC<IRightSectionGridProps> = () => {
             sx={{
               height: "100%",
               justifyContent: "center",
-              display: "flex",
+              display: { xs: "none", md: "flex" },
               flexDirection: "column",
             }}
           >
@@ -105,7 +156,7 @@ const OurWork: FC<IRightSectionGridProps> = () => {
           </Grid>
         </Grid>
       </Container>
-      <Container maxWidth="lg" sx={{ py: 3 }}>
+      <Container maxWidth="lg" sx={{ pt: 3, pb: "5rem" }}>
         <Box
           sx={{
             width: "100%",
@@ -135,13 +186,31 @@ const OurWork: FC<IRightSectionGridProps> = () => {
           sx={{
             backgroundImage: "url(/image/pclist.webp)",
             width: "100%",
-            height: { xs: "300px", md: "600px" },
+            height: { xs: "180px", md: "600px" },
             backgroundPosition: "center",
             backgroundSize: "contain",
             backgroundRepeat: "no-repeat",
             zIndex: 1,
           }}
         ></Box>
+        <Typography
+          sx={{
+            fontWeight: 300,
+            boxSizing: "border-box",
+            padding: 0,
+            m: 0,
+            lineHeight: 1.5,
+            fontSize: { xs: "1rem", lg: "1.3rem" },
+            textAlign: { xs: "center", md: "left" },
+            mt: { xs: 2, md: 5 },
+          }}
+        >
+          The7 extends Elementor’s Theme Builder feature. It allows the
+          customization of almost any place on your website. But unlike vanilla
+          Elementor, you can also create floating headers that change size and
+          colors on scroll, fully customize your WooCommerce, build mega menus,
+          etc.
+        </Typography>
       </Container>
     </Box>
   );
