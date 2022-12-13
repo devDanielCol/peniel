@@ -1,13 +1,11 @@
-import { AppBar, Toolbar, Box, useScrollTrigger } from "@mui/material";
-import { Container } from "@mui/system";
-
-import MapsHomeWorkIcon from "@mui/icons-material/MapsHomeWork";
+import { AppBar, Toolbar, Box, useScrollTrigger, Avatar } from "@mui/material";
 import MenuToolpit from "../Atoms/MenuToolpit/MenuToolpit";
 import CallToActionBtns from "../Atoms/CallToActionBtns/CallToActionBtns";
 import ContactItem from "../../../MenuContent/Contact/Molecules/ContactMenuItem";
 import AboutUsMenuItem from "../../../MenuContent/Solutions/Molecules/AboutUsMenuItem";
 import ThemeButton from "../../../ThemeCtrl/ThemeBtn/ThemeBtn";
 import CatalogMenuItem from "../../../MenuContent/Catalog/Molecules/CatalogMenuItem";
+import useTheme from "../../../../util/hooks/useTheme";
 
 interface NavbarDeskopProps {
   window?: () => Window;
@@ -15,10 +13,11 @@ interface NavbarDeskopProps {
 
 const NavbarDeskop = (props: NavbarDeskopProps) => {
   const { window } = props;
+  const theme = useTheme();
 
   const trigger = useScrollTrigger({
     disableHysteresis: true,
-    threshold: 0,
+    threshold: 50,
     target: window ? window() : undefined,
   });
 
@@ -28,42 +27,47 @@ const NavbarDeskop = (props: NavbarDeskopProps) => {
         sx={{
           boxShadow: 0,
           transition: "all .2s linear",
-          backdropFilter: trigger ? "blur(15px)" : "blur(0px)",
+          // backdropFilter: trigger ? "blur(15px)" : "blur(0px)",
           backgroundColor: trigger ? "custom.navbar" : "transparent",
           backgroundImage: "none",
           display: {
             xs: "none",
             lg: "block",
           },
-          borderBottom: "solid 1px",
           borderBottomColor: trigger ? "#4e317e50" : "transparent",
+          py: trigger ? 1 : 3,
+          px: trigger ? 1 : 3,
         }}
       >
-        <Toolbar>
-          <Container maxWidth="lg" sx={{ display: "flex", py: 2 }}>
-            <Box
+        <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
+            <Avatar
+              src="/image/logo.png"
               sx={{
-                width: "50%",
-                display: "flex",
-                alignItems: "center",
+                transition: "all .2s linear",
+                width: trigger ? "50px" : "80px",
+                height: trigger ? "50px" : "80px",
               }}
-            >
-              <MapsHomeWorkIcon sx={{ color: "text.secondary" }} />
-              <MenuToolpit element={<ContactItem />} name="Contacto" />
-              <MenuToolpit element={<AboutUsMenuItem />} name="Soluciones" />
-            </Box>
-            <Box
-              sx={{
-                width: "50%",
-                display: "flex",
-                justifyContent: "flex-end",
-              }}
-            >
-              <MenuToolpit name="Catalogo" element={<CatalogMenuItem />} />
-              <CallToActionBtns />
-              <ThemeButton sx={{ ml: 2 }} />
-            </Box>
-          </Container>
+            />
+          </Box>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "flex-end",
+              color: trigger ? theme.palette.custom.text : "white",
+            }}
+          >
+            <MenuToolpit element={<ContactItem />} name="Contacto" />
+            <MenuToolpit element={<AboutUsMenuItem />} name="Soluciones" />
+            <MenuToolpit name="Catalogo" element={<CatalogMenuItem />} />
+            <CallToActionBtns />
+            <ThemeButton sx={{ ml: 2, color: "inherit" }} />
+          </Box>
         </Toolbar>
       </AppBar>
     </>

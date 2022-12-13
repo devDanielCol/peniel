@@ -1,9 +1,7 @@
-import { AppBar, Grid, Toolbar, useScrollTrigger } from "@mui/material";
+import { AppBar, Avatar, Grid, Toolbar, useScrollTrigger } from "@mui/material";
 import { FC, MouseEvent, useState } from "react";
-import MapsHomeWorkIcon from "@mui/icons-material/MapsHomeWork";
 
 import MenuHmw from "../../../Menu/Molecules/MenuHmw";
-import CallToActionBtn from "../../NavbarDeskop/Atoms/CallToActionBtns/CallToActionBtns";
 import HmwButton from "../../../Global/HmwButton/HmwButton";
 
 interface NavbarDeskopProps {
@@ -49,32 +47,34 @@ const NavbarMobile: FC<NavbarDeskopProps> = (props) => {
         }}
       >
         <Toolbar>
-          <Grid container sx={{ py: 2 }}>
+          <Grid container sx={{ py: trigger ? 1 : 2 }}>
             <Grid
               item
-              xs={4}
+              xs={6}
               sx={{
                 display: "flex",
                 justifyContent: "flex-start",
                 alignItems: "center",
               }}
             >
-              <CallToActionBtn />
+              <Avatar
+                src="/image/logo.png"
+                sx={{
+                  transition: "all .2s linear",
+                  width: {
+                    xs: trigger ? "30px" : "60px",
+                    sm: trigger ? "40px" : "80px",
+                  },
+                  height: {
+                    xs: trigger ? "30px" : "60px",
+                    sm: trigger ? "40px" : "80px",
+                  },
+                }}
+              />
             </Grid>
             <Grid
               item
-              xs={4}
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <MapsHomeWorkIcon sx={{ color: "text.primary" }} />
-            </Grid>
-            <Grid
-              item
-              xs={4}
+              xs={6}
               sx={{
                 display: "flex",
                 justifyContent: "flex-end",

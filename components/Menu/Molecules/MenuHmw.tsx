@@ -1,7 +1,5 @@
 import { Popover, Box, Grid } from "@mui/material";
-import gradients from "../../../styles/colors/gradients";
 import ImageSearchIcon from "@mui/icons-material/ImageSearch";
-import GradientText from "../../GradientText/GradientText";
 import { catalogImg } from "../../MenuContent/Catalog/Molecules/CatalogMenuItem";
 import ContactOpt from "../../MenuContent/Contact/Atoms/ContactOpt";
 import { socialMedia } from "../../MenuContent/Contact/Molecules/ContactMenuItem";

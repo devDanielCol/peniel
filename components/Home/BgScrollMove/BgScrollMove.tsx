@@ -1,4 +1,4 @@
-import { Container, Typography, Box } from "@mui/material";
+import { Container, Typography } from "@mui/material";
 import { FC } from "react";
 import BackgroundScroll from "../../ScrollWindow/componets/BackgroundScroll";
 
