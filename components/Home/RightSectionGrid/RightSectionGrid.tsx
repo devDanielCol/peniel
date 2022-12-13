@@ -63,6 +63,7 @@ const LeftSectionGrid: FC<ILeftSectionGridProps> = () => {
                       zIndex: 1,
                       boxSizing: "border-box",
                       padding: 0,
+                      color: "#03a9f4",
                       lineHeight: 1,
                       fontSize: { xs: "3.5rem", lg: "7rem" },
                       transition: "all .4s linear",

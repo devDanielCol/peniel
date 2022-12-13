@@ -12,11 +12,11 @@ const ServicesList = () => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            pt: 12,
+            py: { xs: 6, md: 12 },
           }}
         >
           <GradientText
-            fontSize={{ xs: "3rem", lg: "4rem" }}
+            fontSize={{ xs: "2.2rem", lg: "4rem" }}
             sx={{
               fontWeight: 900,
               zIndex: 1,
@@ -33,7 +33,7 @@ const ServicesList = () => {
           </GradientText>
         </Box>
       </Container>
-      <Box sx={{ width: "100%", my: 10 }}>
+      <Box sx={{ width: "100%", pb: { xs: 6, md: 12 } }}>
         <SlideServices />
       </Box>
     </>
