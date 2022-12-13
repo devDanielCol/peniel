@@ -25,7 +25,7 @@ const NavbarMobile: FC<NavbarDeskopProps> = (props) => {
 
   const trigger = useScrollTrigger({
     disableHysteresis: true,
-    threshold: 0,
+    threshold: 50,
     target: window ? window() : undefined,
   });
 
@@ -47,7 +47,7 @@ const NavbarMobile: FC<NavbarDeskopProps> = (props) => {
         }}
       >
         <Toolbar>
-          <Grid container sx={{ py: trigger ? 1 : 2 }}>
+          <Grid container sx={{ py: trigger ? 0.5 : 2 }}>
             <Grid
               item
               xs={6}
@@ -62,11 +62,11 @@ const NavbarMobile: FC<NavbarDeskopProps> = (props) => {
                 sx={{
                   transition: "all .2s linear",
                   width: {
-                    xs: trigger ? "30px" : "60px",
+                    xs: trigger ? "50px" : "70px",
                     sm: trigger ? "40px" : "80px",
                   },
                   height: {
-                    xs: trigger ? "30px" : "60px",
+                    xs: trigger ? "50px" : "70px",
                     sm: trigger ? "40px" : "80px",
                   },
                 }}

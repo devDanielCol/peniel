@@ -1,21 +1,13 @@
-import {
-  Container,
-  Box,
-  Typography,
-  IconButton,
-  Avatar,
-  Grid,
-} from "@mui/material";
+import { Container, Box, Typography } from "@mui/material";
 import { FC, useState } from "react";
 import { InView } from "react-intersection-observer";
-import CloudDownloadIcon from "@mui/icons-material/CloudDownload";
 import { waveMove } from "../../../styles/animation/keyframes/zoomScale";
 
 interface ILeftSectionGridProps {
-  scroll: number;
+  scroll?: number;
 }
 
-const LeftSectionGrid: FC<ILeftSectionGridProps> = ({ scroll }) => {
+const LeftSectionGrid: FC<ILeftSectionGridProps> = () => {
   const [inView, setInView] = useState<boolean>(false);
   const [text, setText] = useState<boolean>(false);
 
@@ -26,7 +18,7 @@ const LeftSectionGrid: FC<ILeftSectionGridProps> = ({ scroll }) => {
           setInView(inView);
           console.log(inView);
         }}
-        threshold={0.25}
+        threshold={0.85}
       >
         <Container
           sx={{
@@ -40,7 +32,8 @@ const LeftSectionGrid: FC<ILeftSectionGridProps> = ({ scroll }) => {
               display: "flex",
               flexDirection: "column",
               py: "8rem",
-              transform: inView ? "translateX(0%)" : "translateX(-100vw)",
+              px: 2,
+              opacity: inView ? "100%" : "0%",
               transition: "all .5s linear",
               overflow: "hidden",
             }}
@@ -49,7 +42,7 @@ const LeftSectionGrid: FC<ILeftSectionGridProps> = ({ scroll }) => {
               onChange={(inView) => {
                 setText(inView);
               }}
-              threshold={0.6}
+              threshold={1}
               rootMargin={"200px 0px 0px 0px"}
               delay={100}
             >
@@ -59,6 +52,7 @@ const LeftSectionGrid: FC<ILeftSectionGridProps> = ({ scroll }) => {
                   justifyContent: "center",
                   alignItems: "center",
                   flexDirection: "row",
+                  transition: "all 1 linear",
                 }}
               >
                 {"Expertos".split("").map((letter, index) => (
@@ -84,7 +78,7 @@ const LeftSectionGrid: FC<ILeftSectionGridProps> = ({ scroll }) => {
             <Typography
               sx={{
                 mt: "4rem",
-                fontSize: { xs: "1.2rem", md: "1.5rem" },
+                fontSize: { xs: "1.1rem", md: "1.5rem" },
                 textAlign: "center",
                 color: "#90a4ae",
               }}
@@ -93,7 +87,7 @@ const LeftSectionGrid: FC<ILeftSectionGridProps> = ({ scroll }) => {
               <Typography
                 sx={{
                   mt: 5,
-                  fontSize: "1.5rem",
+                  fontSize: { xs: "1.1rem", md: "1.5rem" },
                   color: "white",
                 }}
                 component="span"

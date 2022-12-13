@@ -10,6 +10,7 @@ import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
 import { Box, Link, Typography } from "@mui/material";
 import useTheme from "../../../util/hooks/useTheme";
+import GradientText from "../../GradientText/GradientText";
 
 const SlideServices = () => {
   const theme = useTheme();
@@ -26,9 +27,9 @@ const SlideServices = () => {
         m: 1,
       }}
     >
-      <Typography sx={{ fontSize: "1.4rem", fontWeight: 600 }}>
+      <GradientText fontSize={"1.4rem"} sx={{ fontWeight: 600 }}>
         Diseño de interiores
-      </Typography>
+      </GradientText>
       <Typography sx={{ fontSize: "0.8rem", fontWeight: 600 }}>
         Calidad y atencion
       </Typography>

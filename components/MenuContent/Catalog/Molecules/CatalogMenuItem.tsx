@@ -1,5 +1,4 @@
-import { Box, Grid } from "@mui/material";
-import ImageSearchIcon from "@mui/icons-material/ImageSearch";
+import { Box, Button } from "@mui/material";
 
 export const catalogImg = [
   {
@@ -29,50 +28,11 @@ const CatalogMenuItem = () => {
     <>
       <Box
         sx={{
-          width: "400px",
-          minHeight: "300px",
           px: 2,
           py: 4,
         }}
       >
-        <Grid container columnSpacing={1} rowSpacing={1}>
-          {catalogImg.map(({ columns, img }, i) => (
-            <Grid key={i} item xs={columns}>
-              <Box
-                sx={{
-                  width: "100%",
-                  height: "90px",
-                  borderRadius: 2,
-                  backgroundImage: `url(${img})`,
-                  backgroundPositionY: "50%",
-                  backgroundRepeat: "no-repeat",
-                  backgroundSize: "cover",
-                }}
-              >
-                <Box
-                  sx={{
-                    width: "100%",
-                    height: "100%",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    borderRadius: 2,
-                    opacity: "0%",
-                    transition: "all 200ms linear",
-                    "&:hover": {
-                      opacity: "100%",
-                      backgroundColor: "#00000038",
-                      backdropFilter: "blur(2px)",
-                      transition: "all 200ms linear",
-                    },
-                  }}
-                >
-                  <ImageSearchIcon />
-                </Box>
-              </Box>
-            </Grid>
-          ))}
-        </Grid>
+        <Button sx={{ backgroundColor: "secondary" }}>Ver Fotos</Button>
       </Box>
     </>
   );

@@ -1,8 +1,7 @@
 import * as React from "react";
-import { Box, Divider, IconButton, Typography } from "@mui/material";
+import { Box, Divider, Typography } from "@mui/material";
 import { SxProps } from "@mui/material/styles";
 import Link from "@mui/material/Link";
-import KeyboardDoubleArrowUpRoundedIcon from "@mui/icons-material/KeyboardDoubleArrowUpRounded";
 
 interface IProps {
   sx: SxProps;
@@ -38,19 +37,6 @@ const Footer = () => {
         scrollSnapStop: "normal",
       }}
     >
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          flexDirection: "column",
-          py: 2,
-        }}
-      >
-        <IconButton href="/#">
-          <KeyboardDoubleArrowUpRoundedIcon />
-        </IconButton>
-      </Box>
       <Divider sx={{ width: "90%" }} />
       <Box
         sx={{
