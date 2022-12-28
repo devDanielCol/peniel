@@ -2,12 +2,12 @@ const lightThemeOption = {
   palette: {
     mode: "light",
     primary: {
-      main: "#ff4d4d",
+      main: "#ffa300",
       dark: "#ff4d4d",
       light: "#f9cb28",
     },
     secondary: {
-      main: "#7928ca",
+      main: "#ffa300",
       dark: "#ff0080",
     },
     info: {
@@ -39,7 +39,7 @@ const lightThemeOption = {
       text: "#000",
       callaction: "#000",
       section1: "#c294ff",
-      footer: "#f5f5f7",
+      footer: "#292929",
     },
   },
   typography: {

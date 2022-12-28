@@ -19,13 +19,14 @@ const OurClients: FC<IRightSectionGridProps> = () => {
         maxWidth="xl"
         sx={{
           width: "100%",
-          pt: 5,
+          py: 5,
         }}
       >
         <Grid container sx={{ px: 4 }}>
           <Grid
             item
             xs={12}
+            sm={5}
             md={5}
             sx={{
               height: "100%",
@@ -34,6 +35,7 @@ const OurClients: FC<IRightSectionGridProps> = () => {
               flexDirection: "column",
               backgroundColor: "white",
               zIndex: 1,
+              mb: { xs: 5, sm: 0 },
             }}
           >
             <Box
@@ -50,6 +52,7 @@ const OurClients: FC<IRightSectionGridProps> = () => {
           <Grid
             item
             xs={12}
+            sm={7}
             md={7}
             sx={{
               justifyContent: "center",
@@ -118,11 +121,8 @@ const OurClients: FC<IRightSectionGridProps> = () => {
                 mt: { xs: 2, md: 5 },
               }}
             >
-              The7 extends Elementor’s Theme Builder feature. It allows the
-              customization of almost any place on your website. But unlike
-              vanilla Elementor, you can also create floating headers that
-              change size and colors on scroll, fully customize your
-              WooCommerce, build mega menus, etc.
+              Manejamos cualquier nivel de remodelacion, desde la parte interior
+              hasta la exterior de casas, edificios, entre otros.
             </Typography>
           </Grid>
         </Grid>

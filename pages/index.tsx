@@ -1,34 +1,20 @@
-import { useState } from "react";
-import BannerPrincipal from "../components/BannerPrincipal/BannerPrincipal";
+import BannerPrincipal from "../components/Home/Presentation/Presentation";
 import Content from "../components/Layout/Content/General";
-import ScrollTrigger from "../components/ScrollWindow/ScrollTrigger";
-import isNavigator from "../util/helpers/isNavigator";
-import LeftSectionGrid from "../components/Home/LeftSectionGrid/LeftSectionGrind";
-import RightSectionGrid from "../components/Home/RightSectionGrid/RightSectionGrid";
-import ServicesList from "../components/Home/ServicesList/ServicesList";
-import OurClients from "../components/Home/OurClients/OurClients";
-import OurWork from "../components/Home/OurWork/OurWork";
-import EndPage from "../components/Home/EndPage/EndPage";
+import AboutUs from "../components/Home/AboutUs/AboutUs";
+import Description from "../components/Home/Description/Description";
+import JobServices from "../components/Home/JobServices/JobServices";
+import JobSumary from "../components/Home/JobSumary/JobSumary";
+import ContactUs from "../components/Home/ContactUs/ContactUs";
 
 export default function Home() {
-  const currentScroll = (isNavigator() && self.scrollY) || 0;
-  const [scroll, setScroll] = useState<number>(currentScroll);
-
-  ScrollTrigger({
-    onEventScroll({ scrollY }) {
-      setScroll(scrollY);
-    },
-  });
-
   return (
     <Content title="Home | Peniel construcciones">
       <BannerPrincipal />
-      <LeftSectionGrid scroll={scroll} />
-      <RightSectionGrid scroll={scroll} />
-      <OurClients />
-      <OurWork />
-      <EndPage />
-      <ServicesList />
+      <AboutUs />
+      <Description />
+      <JobSumary />
+      <ContactUs />
+      <JobServices />
     </Content>
   );
 }

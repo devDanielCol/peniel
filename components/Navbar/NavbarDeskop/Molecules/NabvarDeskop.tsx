@@ -6,6 +6,7 @@ import AboutUsMenuItem from "../../../MenuContent/Solutions/Molecules/AboutUsMen
 import ThemeButton from "../../../ThemeCtrl/ThemeBtn/ThemeBtn";
 import CatalogMenuItem from "../../../MenuContent/Catalog/Molecules/CatalogMenuItem";
 import useTheme from "../../../../util/hooks/useTheme";
+import Link from "next/link";
 
 interface NavbarDeskopProps {
   window?: () => Window;
@@ -40,21 +41,34 @@ const NavbarDeskop = (props: NavbarDeskopProps) => {
         }}
       >
         <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-            }}
-          >
-            <Avatar
-              src="/image/logo.png"
+          <Link href={"/"}>
+            <Box
               sx={{
-                transition: "all .2s linear",
-                width: trigger ? "50px" : "80px",
-                height: trigger ? "50px" : "80px",
+                display: "flex",
+                alignItems: "center",
               }}
-            />
-          </Box>
+            >
+              <Box
+                sx={{
+                  position: trigger ? "initial" : "absolute",
+                  p: trigger ? 0 : 5,
+                  bgcolor: trigger ? "inherit" : "white",
+                  left: trigger ? 0 : -35,
+                  overflow: trigger ? "initial" : "hidden",
+                  borderBottomRightRadius: 100,
+                }}
+              >
+                <Avatar
+                  src="/image/logo.png"
+                  sx={{
+                    transition: "all .2s linear",
+                    width: trigger ? "50px" : "100px",
+                    height: trigger ? "50px" : "100px",
+                  }}
+                />
+              </Box>
+            </Box>
+          </Link>
           <Box
             sx={{
               display: "flex",

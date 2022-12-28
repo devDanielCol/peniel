@@ -84,7 +84,7 @@ const LeftSectionGrid: FC<ILeftSectionGridProps> = () => {
                 color: "#90a4ae",
               }}
             >
-              The7 is the{" "}
+              Con nosotros{" "}
               <Typography
                 sx={{
                   mt: 5,
@@ -93,12 +93,12 @@ const LeftSectionGrid: FC<ILeftSectionGridProps> = () => {
                 }}
                 component="span"
               >
-                most customizable
+                Construcciones y acabados Peniel
               </Typography>{" "}
-              The7 comes with 60+ prebuilt dummy websites complete with
-              exclusive templates for Elementor, WPBakery Page Builder & Slider
-              Revolution. Import them in a single click. Mix, match, change.
-              Create a perfect foundation for your new website in minutes!
+              Tienes el alto nivel que necesitas de calidad, buena atención y
+              alta demanda en servicios de remodelacion, construccion y
+              acabados. Ya que contamos con las mejores tecnicas, buenas
+              practicas y excelente capacidad en todos nuestros trabajos,
             </Typography>
           </Box>
         </Container>
