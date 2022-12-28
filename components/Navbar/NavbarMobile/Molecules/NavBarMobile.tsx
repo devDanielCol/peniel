@@ -81,7 +81,11 @@ const NavbarMobile: FC<NavbarDeskopProps> = (props) => {
                 alignItems: "center",
               }}
             >
-              <HmwButton onClick={handleClick} open={menuOpen} />
+              <HmwButton
+                onClick={handleClick}
+                open={menuOpen}
+                bgColor={trigger ? "text.primary" : "white"}
+              />
             </Grid>
           </Grid>
         </Toolbar>

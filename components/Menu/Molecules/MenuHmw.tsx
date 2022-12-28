@@ -24,7 +24,7 @@ const MenuHmw = ({ open, anchorEl, onCloseFc }: IMenuHmwProps) => {
       open={open}
       anchorOrigin={{
         vertical: "bottom",
-        horizontal: "left",
+        horizontal: "right",
       }}
       transformOrigin={{
         vertical: "top",

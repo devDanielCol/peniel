@@ -1,20 +1,25 @@
-import { Button, Typography } from "@mui/material";
+import { Button, SxProps, Typography } from "@mui/material";
 import { MouseEvent } from "react";
 
 interface IHmwButtonProps {
   onClick?(event: MouseEvent<HTMLButtonElement>): void;
   open?: boolean;
+  sx?: SxProps;
+  bgColor?: string;
 }
 
-const HmwButton = ({ onClick, open }: IHmwButtonProps) => {
+const HmwButton = ({ onClick, open, sx, bgColor }: IHmwButtonProps) => {
   return (
-    <Button onClick={onClick} sx={{ display: "flex", flexDirection: "column" }}>
+    <Button
+      onClick={onClick}
+      sx={{ display: "flex", flexDirection: "column", ...sx }}
+    >
       <Typography
         component="div"
         sx={{
           width: "30px",
           height: "2px",
-          backgroundColor: "text.primary",
+          backgroundColor: bgColor,
           transform: open
             ? "rotate(-45deg) translateX(-1px) translateY(7px)"
             : "",
@@ -28,7 +33,7 @@ const HmwButton = ({ onClick, open }: IHmwButtonProps) => {
           width: "30px",
           height: "2px",
           opacity: open ? "0%" : "100%",
-          backgroundColor: "text.primary",
+          backgroundColor: bgColor,
           transition: "all .2s linear",
         }}
       />
@@ -38,7 +43,7 @@ const HmwButton = ({ onClick, open }: IHmwButtonProps) => {
           mt: 0.5,
           width: "30px",
           height: "2px",
-          backgroundColor: "text.primary",
+          backgroundColor: bgColor,
           transform: open
             ? "rotate(45deg) translateX(-1px) translateY(-7px)"
             : "",
