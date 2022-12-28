@@ -20,7 +20,7 @@ const CardServices: FC<CardServicesProps> = ({
   return (
     <Box
       sx={{
-        height: { xs: "150px", md: "220px" },
+        height: { xs: "180px", md: "220px" },
         width: { xs: "180px", md: "240px" },
         p: { xs: "26px", md: "36px" },
         backgroundColor: theme.palette.background.paper,

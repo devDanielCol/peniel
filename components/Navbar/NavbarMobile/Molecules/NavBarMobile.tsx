@@ -1,8 +1,16 @@
-import { AppBar, Avatar, Grid, Toolbar, useScrollTrigger } from "@mui/material";
+import {
+  AppBar,
+  Avatar,
+  Box,
+  Grid,
+  Toolbar,
+  useScrollTrigger,
+} from "@mui/material";
 import { FC, MouseEvent, useState } from "react";
 
 import MenuHmw from "../../../Menu/Molecules/MenuHmw";
 import HmwButton from "../../../Global/HmwButton/HmwButton";
+import Link from "next/link";
 
 interface NavbarDeskopProps {
   window?: () => Window;
@@ -57,20 +65,35 @@ const NavbarMobile: FC<NavbarDeskopProps> = (props) => {
                 alignItems: "center",
               }}
             >
-              <Avatar
-                src="/image/logo.png"
-                sx={{
-                  transition: "all .2s linear",
-                  width: {
-                    xs: trigger ? "50px" : "70px",
-                    sm: trigger ? "40px" : "80px",
-                  },
-                  height: {
-                    xs: trigger ? "50px" : "70px",
-                    sm: trigger ? "40px" : "80px",
-                  },
-                }}
-              />
+              <Link href={"/"}>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
+                  <Box
+                    sx={{
+                      position: trigger ? "initial" : "absolute",
+                      p: trigger ? 0 : 3,
+                      bgcolor: trigger ? "inherit" : "white",
+                      top: 0,
+                      left: trigger ? 0 : -20,
+                      overflow: trigger ? "initial" : "hidden",
+                      borderBottomRightRadius: 100,
+                    }}
+                  >
+                    <Avatar
+                      src="/image/logo.png"
+                      sx={{
+                        transition: "all .2s linear",
+                        width: trigger ? "50px" : "100px",
+                        height: trigger ? "50px" : "100px",
+                      }}
+                    />
+                  </Box>
+                </Box>
+              </Link>
             </Grid>
             <Grid
               item
