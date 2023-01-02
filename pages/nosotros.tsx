@@ -1,15 +1,12 @@
-import { Box } from "@mui/material";
-import { Container } from "@mui/system";
+import Article from "../components/AboutUs/Article/Article";
 import Presentation from "../components/AboutUs/Presentation/Presentation";
-import Content from "../components/Layout/Content/General";
+import ContentSimple from "../components/Layout/Content/Simple";
 
 export default function Home() {
   return (
-    <Content title="Home | Peniel construcciones">
+    <ContentSimple title="Sobre nostros | Peniel construcciones">
       <Presentation />
-      <Container>
-        <Box sx={{ minHeight: "100vh" }}></Box>
-      </Container>
-    </Content>
+      <Article />
+    </ContentSimple>
   );
 }

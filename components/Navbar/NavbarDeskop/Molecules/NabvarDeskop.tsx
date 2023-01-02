@@ -4,7 +4,7 @@ import CallToActionBtns from "../Atoms/CallToActionBtns/CallToActionBtns";
 import ContactItem from "../../../MenuContent/Contact/Molecules/ContactMenuItem";
 import AboutUsMenuItem from "../../../MenuContent/Solutions/Molecules/AboutUsMenuItem";
 import ThemeButton from "../../../ThemeCtrl/ThemeBtn/ThemeBtn";
-import CatalogMenuItem from "../../../MenuContent/Catalog/Molecules/CatalogMenuItem";
+import Pages from "../../../MenuContent/PagesList/Molecules/PagesList";
 import useTheme from "../../../../util/hooks/useTheme";
 import Link from "next/link";
 
@@ -37,7 +37,7 @@ const NavbarDeskop = (props: NavbarDeskopProps) => {
           },
           borderBottomColor: trigger ? "#4e317e50" : "transparent",
           py: trigger ? 1 : 3,
-          px: trigger ? 1 : 3,
+          px: trigger ? 1 : 2,
         }}
       >
         <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
@@ -51,21 +51,47 @@ const NavbarDeskop = (props: NavbarDeskopProps) => {
               <Box
                 sx={{
                   position: trigger ? "initial" : "absolute",
-                  p: trigger ? 0 : 5,
-                  bgcolor: trigger ? "inherit" : "white",
+                  bgcolor: trigger ? "transparent" : "#ffa700",
+                  pr: trigger ? 0 : 1,
                   left: trigger ? 0 : -35,
                   overflow: trigger ? "initial" : "hidden",
-                  borderBottomRightRadius: 100,
+                  borderBottomRightRadius: "100%",
+                  borderTopRightRadius: 200,
                 }}
               >
-                <Avatar
-                  src="/image/logo.png"
+                <Box
                   sx={{
-                    transition: "all .2s linear",
-                    width: trigger ? "50px" : "100px",
-                    height: trigger ? "50px" : "100px",
+                    pr: trigger ? 0 : 2,
+                    pb: trigger ? 0 : 0.5,
+                    bgcolor: trigger ? "transparent" : "#ffea00",
+                    overflow: trigger ? "initial" : "hidden",
+                    borderBottomRightRadius: "100%",
+                    borderTopRightRadius: 200,
                   }}
-                />
+                >
+                  <Box
+                    sx={{
+                      pl: trigger ? 0 : 3,
+                      pr: trigger ? 0 : 6,
+                      pt: trigger ? 0 : 8,
+                      pb: trigger ? 0 : 3,
+                      bgcolor: trigger ? "inherit" : "white",
+                      left: trigger ? 0 : -35,
+                      overflow: trigger ? "initial" : "hidden",
+                      borderBottomRightRadius: "100%",
+                      borderTopRightRadius: 200,
+                    }}
+                  >
+                    <Avatar
+                      src="/image/logo.png"
+                      sx={{
+                        transition: "all .2s linear",
+                        width: trigger ? "50px" : "100px",
+                        height: trigger ? "50px" : "100px",
+                      }}
+                    />
+                  </Box>
+                </Box>
               </Box>
             </Box>
           </Link>
@@ -76,9 +102,9 @@ const NavbarDeskop = (props: NavbarDeskopProps) => {
               color: trigger ? theme.palette.custom.text : "white",
             }}
           >
-            <MenuToolpit element={<ContactItem />} name="Contacto" />
-            <MenuToolpit element={<AboutUsMenuItem />} name="Soluciones" />
-            <MenuToolpit name="Catalogo" element={<CatalogMenuItem />} />
+            <MenuToolpit name="Páginas" element={<Pages />} />
+            <MenuToolpit name="Soluciones" element={<AboutUsMenuItem />} />
+            <MenuToolpit name="Contacto" element={<ContactItem />} />
             <CallToActionBtns />
             <ThemeButton sx={{ ml: 2, color: "inherit" }} />
           </Box>

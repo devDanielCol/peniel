@@ -67,7 +67,6 @@ const Presentation: FC = () => {
           </InView>
         </Box>
       </Box>
-
       <Box
         sx={{
           top: 0,

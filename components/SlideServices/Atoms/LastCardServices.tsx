@@ -3,15 +3,21 @@ import { Box, Link, Typography } from "@mui/material";
 import GradientText from "../../GradientText/GradientText";
 import { FC } from "react";
 import gradients from "../../../styles/colors/gradients";
+import useTheme from "../../../util/hooks/useTheme";
 
 const LastCardServices: FC = () => {
+  const theme = useTheme();
+
   return (
     <Box
       sx={{
         height: { xs: "150px", md: "220px" },
         width: { xs: "180px", md: "240px" },
         p: { xs: "26px", md: "36px" },
-        backgroundImage: gradients.yellowPink,
+        backgroundImage:
+          theme.palette.mode !== "dark"
+            ? gradients.yellowPink
+            : "linear-gradient(45deg, #ffa700 0%, #FF2ABE 100%)",
         borderRadius: "20px",
         boxShadow: "5px 5px 10px rgb(0 0 0 / 5%)",
         m: 1,

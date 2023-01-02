@@ -1,6 +1,4 @@
 import { Popover, Box, Grid } from "@mui/material";
-import ImageSearchIcon from "@mui/icons-material/ImageSearch";
-import { catalogImg } from "../../MenuContent/Catalog/Molecules/CatalogMenuItem";
 import ContactOpt from "../../MenuContent/Contact/Atoms/ContactOpt";
 import { socialMedia } from "../../MenuContent/Contact/Molecules/ContactMenuItem";
 import AboutUsOpt from "../../MenuContent/Solutions/Atoms/AboutUsOpt";
@@ -8,6 +6,7 @@ import ListServices from "../../MenuContent/Solutions/Atoms/ListServices";
 import AccordionMenuItem from "../Atoms/Accordion";
 import useTheme from "../../../util/hooks/useTheme";
 import ThemeButton from "../../ThemeCtrl/ThemeBtn/ThemeBtn";
+import ToolpitOpt from "../../MenuContent/PagesList/Molecules/PagesList";
 
 interface IMenuHmwProps {
   open: boolean;
@@ -57,17 +56,10 @@ const MenuHmw = ({ open, anchorEl, onCloseFc }: IMenuHmwProps) => {
         }}
       >
         <Box sx={{ width: "100%" }}>
-          <AccordionMenuItem sumary={"Contacto"}>
-            <>
-              {socialMedia.map(({ name, description, icon }, i) => (
-                <ContactOpt
-                  key={i}
-                  icon={icon}
-                  title={name}
-                  description={description}
-                />
-              ))}
-            </>
+          <AccordionMenuItem sumary={"Paginas"}>
+            <Grid container columnSpacing={1} rowSpacing={1}>
+              <ToolpitOpt />
+            </Grid>
           </AccordionMenuItem>
           <AccordionMenuItem sumary={"Soluciones"}>
             <>
@@ -97,45 +89,17 @@ const MenuHmw = ({ open, anchorEl, onCloseFc }: IMenuHmwProps) => {
               ></Box>
             </>
           </AccordionMenuItem>
-          <AccordionMenuItem sumary={"Catalogo"}>
-            <Grid container columnSpacing={1} rowSpacing={1}>
-              {catalogImg.map(({ columns, img }, i) => (
-                <Grid key={i} item xs={columns}>
-                  <Box
-                    sx={{
-                      width: "100%",
-                      height: "90px",
-                      borderRadius: 2,
-                      backgroundImage: `url(${img})`,
-                      backgroundPositionY: "50%",
-                      backgroundRepeat: "no-repeat",
-                      backgroundSize: "cover",
-                    }}
-                  >
-                    <Box
-                      sx={{
-                        width: "100%",
-                        height: "100%",
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        borderRadius: 2,
-                        opacity: "0%",
-                        transition: "all 200ms linear",
-                        "&:hover": {
-                          opacity: "100%",
-                          backgroundColor: "#00000038",
-                          backdropFilter: "blur(2px)",
-                          transition: "all 200ms linear",
-                        },
-                      }}
-                    >
-                      <ImageSearchIcon sx={{ color: "text.primary" }} />
-                    </Box>
-                  </Box>
-                </Grid>
+          <AccordionMenuItem sumary={"Contacto"}>
+            <>
+              {socialMedia.map(({ name, description, icon }, i) => (
+                <ContactOpt
+                  key={i}
+                  icon={icon}
+                  title={name}
+                  description={description}
+                />
               ))}
-            </Grid>
+            </>
           </AccordionMenuItem>
         </Box>
         <Box

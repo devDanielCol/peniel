@@ -12,11 +12,6 @@ const BannerPrincipal: FC = () => {
       sx={{
         position: "relative",
         height: { xs: "70vh", md: "90vh" },
-        backgroundColor: "transparent",
-        backgroundImage:
-          "url(https://cdn.pixabay.com/photo/2016/12/08/21/21/skyscrapers-1893201_1280.jpg)",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
       }}
     >
       <Box
@@ -29,20 +24,6 @@ const BannerPrincipal: FC = () => {
           px: 2,
         }}
       >
-        {/* <MouseMoveContent
-          onMove={({ centerX, pageX, pageY, width, height, centerY }) => {
-            const dX = pageX - centerX;
-            const dY = pageY - centerY;
-            setGradient((dX / width) * 100 + (dY / height) * 100);
-          }}
-          sx={{
-            width: "100%",
-            height: "100vh",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        > */}
         <Box
           sx={{
             width: "100%",
@@ -76,9 +57,6 @@ const BannerPrincipal: FC = () => {
                 textAlign={{ xs: "center", md: "center" }}
                 letterSpacing={{ xs: "-2px", sm: "-3px" }}
                 gradient={gradients.whiteLight}
-                // gradient={`radial-gradient( circle at ${
-                //   gradient * 1.5
-                // }%,white, white)`}
                 sx={{ ml: 0 }}
               >
                 Construcciones y acabados
@@ -99,7 +77,6 @@ const BannerPrincipal: FC = () => {
             </Box>
           </InView>
         </Box>
-        {/* </MouseMoveContent> */}
       </Box>
 
       <Box
@@ -113,6 +90,19 @@ const BannerPrincipal: FC = () => {
           backgroundSize: "cover",
           zIndex: 1,
           opacity: 0.3,
+        }}
+      ></Box>
+      <Box
+        sx={{
+          top: 0,
+          position: "absolute",
+          width: "100vw",
+          height: "100%",
+          backgroundColor: "transparent",
+          backgroundImage:
+            "url(https://cdn.pixabay.com/photo/2016/12/08/21/21/skyscrapers-1893201_1280.jpg)",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
         }}
       ></Box>
     </Box>

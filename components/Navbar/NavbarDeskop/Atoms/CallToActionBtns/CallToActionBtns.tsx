@@ -1,4 +1,4 @@
-import { Button } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 
 const CallToActionBtn = () => {
   return (
@@ -15,7 +15,18 @@ const CallToActionBtn = () => {
         borderRadius: 2,
       }}
     >
-      Servicios
+      <Typography
+        sx={{
+          fontWeight: 500,
+          alignItems: "center",
+          transition: "all .2s linear",
+          lineHeight: 1,
+          color: "inherit",
+        }}
+        component="span"
+      >
+        Servicios
+      </Typography>
     </Button>
   );
 };

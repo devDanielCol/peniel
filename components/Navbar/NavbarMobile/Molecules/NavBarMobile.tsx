@@ -75,22 +75,53 @@ const NavbarMobile: FC<NavbarDeskopProps> = (props) => {
                   <Box
                     sx={{
                       position: trigger ? "initial" : "absolute",
-                      p: trigger ? 0 : 3,
-                      bgcolor: trigger ? "inherit" : "white",
-                      top: 0,
-                      left: trigger ? 0 : -20,
+                      bgcolor: trigger ? "transparent" : "#ffa700",
+                      pr: trigger ? 0 : 0.75,
+                      left: trigger ? 0 : -35,
                       overflow: trigger ? "initial" : "hidden",
-                      borderBottomRightRadius: 100,
+                      borderBottomRightRadius: "100%",
+                      borderTopRightRadius: 200,
                     }}
                   >
-                    <Avatar
-                      src="/image/logo.png"
+                    <Box
                       sx={{
-                        transition: "all .2s linear",
-                        width: trigger ? "50px" : "100px",
-                        height: trigger ? "50px" : "100px",
+                        pr: trigger ? 0 : 1,
+                        pb: trigger ? 0 : 0.3,
+                        bgcolor: trigger ? "transparent" : "#ffea00",
+                        overflow: trigger ? "initial" : "hidden",
+                        borderBottomRightRadius: "100%",
+                        borderTopRightRadius: 200,
                       }}
-                    />
+                    >
+                      <Box
+                        sx={{
+                          pl: trigger ? 0 : 6,
+                          pr: trigger ? 0 : 3,
+                          pt: trigger ? 0 : 8,
+                          pb: trigger ? 0 : 3,
+                          bgcolor: trigger ? "inherit" : "white",
+                          left: trigger ? 0 : -35,
+                          overflow: trigger ? "initial" : "hidden",
+                          borderBottomRightRadius: "100%",
+                          borderTopRightRadius: 200,
+                        }}
+                      >
+                        <Avatar
+                          src="/image/logo.png"
+                          sx={{
+                            transition: "all .2s linear",
+                            width: {
+                              xs: trigger ? "40px" : "70px",
+                              md: trigger ? "50px" : "100px",
+                            },
+                            height: {
+                              xs: trigger ? "40px" : "80px",
+                              md: trigger ? "50px" : "100px",
+                            },
+                          }}
+                        />
+                      </Box>
+                    </Box>
                   </Box>
                 </Box>
               </Link>
