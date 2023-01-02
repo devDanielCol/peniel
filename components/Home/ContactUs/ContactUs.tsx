@@ -29,7 +29,7 @@ const EndPage: FC = () => {
                 p: { xs: 2, md: 4 },
                 borderTopLeftRadius: "24px",
                 borderBottomLeftRadius: "24px",
-                backgroundColor: "#ffea00",
+                backgroundColor: "custom.section1",
               }}
             >
               <Typography
@@ -66,7 +66,7 @@ const EndPage: FC = () => {
                       width: "100%",
                       borderRadius: "8px",
                       p: 0.5,
-                      backgroundColor: "white",
+                      backgroundColor: "primary",
                       boxShadow: 0,
                     }}
                   >
@@ -88,7 +88,7 @@ const EndPage: FC = () => {
                       width: "100%",
                       borderRadius: "8px",
                       p: 0.5,
-                      backgroundColor: "white",
+                      backgroundColor: "primary",
                       boxShadow: 0,
                     }}
                   >
@@ -110,7 +110,7 @@ const EndPage: FC = () => {
                       width: "100%",
                       borderRadius: "8px",
                       p: 0.5,
-                      backgroundColor: "white",
+                      backgroundColor: "primary",
                       boxShadow: 0,
                     }}
                   >

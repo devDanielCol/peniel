@@ -38,7 +38,7 @@ const darkThemeOption = {
       navbar: "#000000",
       text: "#fff",
       callaction: "#fff",
-      section1: "#0b0513",
+      section1: "#ffa700",
     },
   },
 
