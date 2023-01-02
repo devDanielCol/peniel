@@ -12,6 +12,8 @@ const BannerPrincipal: FC = () => {
       sx={{
         position: "relative",
         height: { xs: "70vh", md: "90vh" },
+        borderBottomRightRadius: "40%",
+        overflow: "hidden",
       }}
     >
       <Box
@@ -103,6 +105,7 @@ const BannerPrincipal: FC = () => {
             "url(https://cdn.pixabay.com/photo/2016/12/08/21/21/skyscrapers-1893201_1280.jpg)",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
+          filter: "brightness(0.5)",
         }}
       ></Box>
     </Box>
